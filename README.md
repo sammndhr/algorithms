@@ -16,6 +16,11 @@
 14. [x] [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 15. [x] [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 16. [x] [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+17. [x] [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/solution/)
+18. [x] [394. Decode String](https://leetcode.com/problems/decode-string/)
+19. [x] [179. Largest Number](https://leetcode.com/problems/largest-number/)
+20. [x] [79. Word Search](https://leetcode.com/problems/word-search/)
+21. [x] [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 
 ## Lists
 
@@ -24,6 +29,7 @@
 3. [x] [2. Add Two Numbers](https://leetcode.com/problems/add-two-numbers/)
 4. [x] [1171. Remove Zero Sum Consecutive Nodes from Linked List](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/)
 5. [x] [24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
+6. [x] [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
 
 ## Recursion
 
@@ -37,9 +43,10 @@
 4. [x] [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 5. [x] [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 6. [x] [109. Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
-7. [][366. find leaves of binary tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)
+7. [x] [366. find leaves of binary tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)
 
 ## Graph
 
 1. [x] [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
 1. [x] [547. Friend Circles](https://leetcode.com/problems/friend-circles/)
+1. [x] [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/)
