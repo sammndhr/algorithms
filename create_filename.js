@@ -12,5 +12,5 @@ const createFilename = str => {
     .join('_')}.js`
 }
 
-const name = '547. Friend Circles'
-console.log(createFilename(name))
+const name = ''
+// console.log(createFilename(name))

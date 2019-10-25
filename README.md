@@ -21,6 +21,8 @@
 19. [x] [179. Largest Number](https://leetcode.com/problems/largest-number/)
 20. [x] [79. Word Search](https://leetcode.com/problems/word-search/)
 21. [x] [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
+22. [x] [826. Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/)
+23. [x] [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/most-profit-assigning-work/)
 
 ## Lists
 
@@ -44,9 +46,22 @@
 5. [x] [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 6. [x] [109. Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
 7. [x] [366. find leaves of binary tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)
+8. [x] [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
+9. [x] [865. Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 
 ## Graph
 
 1. [x] [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
-1. [x] [547. Friend Circles](https://leetcode.com/problems/friend-circles/)
-1. [x] [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/)
+2. [x] [547. Friend Circles](https://leetcode.com/problems/friend-circles/)
+3. [x] [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/)
+
+## Others
+
+1. [x] [29. Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)
+2. [x] [881. Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
+3. [x] [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
+4. [x] [1007. Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/)
+
+## Dynamic Programming
+
+4. [x] [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
