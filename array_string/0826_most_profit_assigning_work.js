@@ -5,26 +5,26 @@
  * @return {number}
  */
 var maxProfitAssignment = function(difficulty, profit, workers) {
-  const diffProfHash = {}
+  const diffProf = []
   let total = 0,
-    d = 0
-  difficulty.forEach((diff, i) => {
-    diffProfHash[diff] = profit[i]
-  })
-  difficulty.sort((a, b) => {
-    return a - b
-  })
-  workers.sort((a, b) => {
-    return a - b
-  })
-  workers.forEach((worker, i) => {
-    while (difficulty[d] <= worker) {
-      d++
-    }
+    maxP = 0,
+    i = 0
 
-    console.log(total, difficulty[d], d, diffProfHash[difficulty[d]])
-    total += d < 0 ? 0 : diffProfHash[difficulty[d]]
+  difficulty.forEach((diff, j) => {
+    diffProf[j] = [diff, profit[j]]
   })
+
+  diffProf.sort((a, b) => a[0] - b[0] || (a[0] == b[0] && a[1] - b[1]))
+  workers.sort((a, b) => a - b)
+
+  const diffProfLen = diffProf.length
+
+  for (let work of workers) {
+    while (i < diffProfLen && work >= diffProf[i][0]) {
+      maxP = Math.max(diffProf[i++][1], maxP)
+    }
+    total += maxP
+  }
 
   return total
 }
@@ -40,4 +40,7 @@ worker = [40, 25, 25]
 diffculty = [13, 37, 58]
 profit = [4, 90, 96]
 worker = [34, 45, 73]
+diffculty = [13, 37, 58]
+profit = [4, 90, 96]
+worker = [34, 73, 45]
 console.log(maxProfitAssignment(diffculty, profit, worker))

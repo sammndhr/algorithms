@@ -23,6 +23,9 @@
 21. [x] [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 22. [x] [826. Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/)
 23. [x] [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/most-profit-assigning-work/)
+24. [x] [1057. Campus Bikes](https://leetcode.com/problems/campus-bikes/)
+25. [x] [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
+26. [x] [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 
 ## Lists
 
@@ -32,6 +35,7 @@
 4. [x] [1171. Remove Zero Sum Consecutive Nodes from Linked List](https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/)
 5. [x] [24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
 6. [x] [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
+7. [x] [1110. Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)
 
 ## Recursion
 
@@ -54,6 +58,7 @@
 1. [x] [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
 2. [x] [547. Friend Circles](https://leetcode.com/problems/friend-circles/)
 3. [x] [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/)
+4. [x] [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)
 
 ## Others
 
@@ -65,3 +70,9 @@
 ## Dynamic Programming
 
 4. [x] [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
+## Data Structures
+
+### Binary Search
+
+1. [x] [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)

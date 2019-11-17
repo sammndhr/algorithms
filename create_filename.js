@@ -12,5 +12,5 @@ const createFilename = str => {
     .join('_')}.js`
 }
 
-const name = ''
-// console.log(createFilename(name))
+const name = '3. Longest Substring Without Repeating Characters'
+console.log(createFilename(name))
