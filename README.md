@@ -3,7 +3,7 @@
 1. [x] [1. Two Sum](https://leetcode.com/problems/two-sum)
 2. [x] [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray)
 3. [x] [20. Valid Parentheses](https://leetcode.com/problems/valid-parentheses/)
-4. [x] [121. Best Time to Buy and Sell Stocks](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
+4. [x] [121. Best Time to Buy and Sell Stock](https://leetcode.com/problems/best-time-to-buy-and-sell-stock)
 5. [x] [36. Valid Sudoku](https://leetcode.com/problems/valid-sudoku/)
 6. [x] Find Longest Palindrome
 7. [x] [544. Output Contest Matches](https://leetcode.com/problems/output-contest-matches/)
@@ -16,16 +16,17 @@
 14. [x] [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
 15. [x] [49. Group Anagrams](https://leetcode.com/problems/group-anagrams/)
 16. [x] [56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
-17. [x] [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/solution/)
+17. [x] [560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
 18. [x] [394. Decode String](https://leetcode.com/problems/decode-string/)
 19. [x] [179. Largest Number](https://leetcode.com/problems/largest-number/)
 20. [x] [79. Word Search](https://leetcode.com/problems/word-search/)
 21. [x] [977. Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/)
 22. [x] [826. Most Profit Assigning Work](https://leetcode.com/problems/most-profit-assigning-work/)
-23. [x] [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/most-profit-assigning-work/)
+23. [x] [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/)
 24. [x] [1057. Campus Bikes](https://leetcode.com/problems/campus-bikes/)
 25. [x] [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/)
 26. [x] [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+27. [x] [973. k Closest Points](https://leetcode.com/problems/k-closest-points-to-origin/)
 
 ## Lists
 

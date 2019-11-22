@@ -1,4 +1,6 @@
 const createFilename = str => {
+  str = str.replace(/\(/g, '')
+  str = str.replace(/\)/g, '')
   const i = str.indexOf('.')
   let num = str.slice(0, i)
 
