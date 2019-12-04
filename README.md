@@ -40,7 +40,7 @@
 
 ## Recursion
 
-1. [x] [N-Queens](https://leetcode.com/problems/n-queens/description/)
+1. [x] [51. N-Queens](https://leetcode.com/problems/n-queens/description/)
 
 ## Tree
 
