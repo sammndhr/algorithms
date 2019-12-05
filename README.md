@@ -67,6 +67,7 @@
 2. [x] [881. Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
 3. [x] [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 4. [x] [1007. Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/)
+5. [x] [1024. Video Stitching](https://leetcode.com/problems/video-stitching/)
 
 ## Dynamic Programming
 
