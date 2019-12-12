@@ -1,3 +1,4 @@
+
 ## Arrays and Strings
 
 1. [x] [1. Two Sum](https://leetcode.com/problems/two-sum)
@@ -61,6 +62,16 @@
 3. [x] [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/)
 4. [x] [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)
 
+## Dynamic Programming
+
+4. [x] [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
+
+
+## Binary Search
+
+1. [x] [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+
+
 ## Others
 
 1. [x] [29. Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)
@@ -68,13 +79,4 @@
 3. [x] [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/)
 4. [x] [1007. Minimum Domino Rotations For Equal Row](https://leetcode.com/problems/minimum-domino-rotations-for-equal-row/)
 5. [x] [1024. Video Stitching](https://leetcode.com/problems/video-stitching/)
-
-## Dynamic Programming
-
-4. [x] [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
-
-## Data Structures
-
-### Binary Search
-
-1. [x] [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
+6. [x] [841. Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/)
