@@ -3,7 +3,12 @@
  * @return {number}
  */
 
-const directions = [[-1, 0], [0, 1], [1, 0], [0, -1]]
+const directions = [
+  [-1, 0],
+  [0, 1],
+  [1, 0],
+  [0, -1]
+]
 const dfs = (i, j, count) => {
   if (!grid[i] || !grid[i][j]) return 0
   if (grid[i][j] === 1) {

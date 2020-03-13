@@ -74,11 +74,33 @@ var exist = function(board, query) {
   return false
 }
 
-const board = [['A', 'B', 'C', 'E'], ['S', 'F', 'C', 'S'], ['A', 'D', 'E', 'E']]
+const board = [
+  ['A', 'B', 'C', 'E'],
+  ['S', 'F', 'C', 'S'],
+  ['A', 'D', 'E', 'E']
+]
 console.log(exist(board, 'ABCCED'))
 console.log(exist(board, 'SEE'))
 console.log(exist(board, 'ABCB'))
-console.log(exist([['C', 'A', 'A'], ['A', 'A', 'A'], ['B', 'C', 'D']], 'AAB'))
+console.log(
+  exist(
+    [
+      ['C', 'A', 'A'],
+      ['A', 'A', 'A'],
+      ['B', 'C', 'D']
+    ],
+    'AAB'
+  )
+)
 console.log(exist(board, 'ABCCED12'))
-console.log(exist([['A', 'B', 'C', 'E'], ['S', 'F', 'E', 'S'], ['A', 'D', 'E', 'E']], 'ABCESEEEFS'))
+console.log(
+  exist(
+    [
+      ['A', 'B', 'C', 'E'],
+      ['S', 'F', 'E', 'S'],
+      ['A', 'D', 'E', 'E']
+    ],
+    'ABCESEEEFS'
+  )
+)
 console.log(exist([['a']], 'a'))

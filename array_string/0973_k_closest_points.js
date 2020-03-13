@@ -24,7 +24,10 @@ var kClosest = function(points, K) {
       }
     } else {
       closestSoFar.sort((a, b) => a - b)
-      closestSoFar[csfLen - 1] = csfLen === 1 ? Math.min(closestSoFar[csfLen - 1], curr) : Math.max(closestSoFar[csfLen - 1], curr)
+      closestSoFar[csfLen - 1] =
+        csfLen === 1
+          ? Math.min(closestSoFar[csfLen - 1], curr)
+          : Math.max(closestSoFar[csfLen - 1], curr)
     }
     if (!pointsHash[curr]) {
       pointsHash[curr] = [points[i]]
@@ -102,14 +105,30 @@ function minMeetingRooms(times) {
 
 // console.log(minMeetingRooms([[0, 30], [5, 10], [15, 20]]))
 // console.log(minMeetingRooms([[1, 5], [8, 9], [8, 9]]))
-console.log(minMeetingRooms([[6, 10], [13, 14], [12, 14]]))
+console.log(
+  minMeetingRooms([
+    [6, 10],
+    [13, 14],
+    [12, 14]
+  ])
+)
 
 graph = {
   $id: '1',
   neighbors: [
     {
       $id: '2',
-      neighbors: [{ $ref: '1' }, { $id: '3', neighbors: [{ $ref: '2' }, { $id: '4', neighbors: [{ $ref: '3' }, { $ref: '1' }], val: 4 }], val: 3 }],
+      neighbors: [
+        { $ref: '1' },
+        {
+          $id: '3',
+          neighbors: [
+            { $ref: '2' },
+            { $id: '4', neighbors: [{ $ref: '3' }, { $ref: '1' }], val: 4 }
+          ],
+          val: 3
+        }
+      ],
       val: 2
     },
     { $ref: '4' }

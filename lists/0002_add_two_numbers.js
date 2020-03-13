@@ -48,7 +48,10 @@ var addTwoNumbers = function(node1, node2) {
   return dummyHead.next
 }
 
-node1 = { val: 2, next: { val: 4, next: { val: 3, next: { val: 9, next: null } } } }
+node1 = {
+  val: 2,
+  next: { val: 4, next: { val: 3, next: { val: 9, next: null } } }
+}
 node1 = { val: 2, next: { val: 4, next: { val: 3, next: null } } }
 node2 = { val: 5, next: { val: 6, next: { val: 4, next: null } } }
 // node1 = { val: 9, next: null }

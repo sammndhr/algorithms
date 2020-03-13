@@ -66,19 +66,39 @@ var insertIntoBST = function(root, val) {
 const node1 = {
   val: 4,
   right: { val: 7, right: null, left: null },
-  left: { val: 2, right: { val: 3, right: null, left: null }, left: { val: 1, right: null, left: null } }
+  left: {
+    val: 2,
+    right: { val: 3, right: null, left: null },
+    left: { val: 1, right: null, left: null }
+  }
 }
 
 const node2 = {
   val: 40,
-  right: { val: 60, right: { val: 70, right: null, left: null }, left: { val: 50, right: null, left: null } },
-  left: { val: 20, right: { val: 30, right: null, left: null }, left: { val: 10, right: null, left: null } }
+  right: {
+    val: 60,
+    right: { val: 70, right: null, left: null },
+    left: { val: 50, right: null, left: null }
+  },
+  left: {
+    val: 20,
+    right: { val: 30, right: null, left: null },
+    left: { val: 10, right: null, left: null }
+  }
 }
 
 const node3 = {
   val: 40,
-  right: { val: 60, right: { val: 70, right: null, left: null }, left: { val: 50, right: null, left: null } },
-  left: { val: 20, right: { val: 30, right: null, left: null }, left: { val: 10, right: null, left: null } }
+  right: {
+    val: 60,
+    right: { val: 70, right: null, left: null },
+    left: { val: 50, right: null, left: null }
+  },
+  left: {
+    val: 20,
+    right: { val: 30, right: null, left: null },
+    left: { val: 10, right: null, left: null }
+  }
 }
 console.log(JSON.stringify(insertIntoBST(node1, 5)))
 console.log(JSON.stringify(insertIntoBSTRecursive(node2, 25)))

@@ -55,29 +55,53 @@ var isValidBSTIter = function(root) {
   return true
 }
 
-node1 = { val: 2, right: { val: 3, right: null, left: null }, left: { val: 1, right: null, left: null } }
+node1 = {
+  val: 2,
+  right: { val: 3, right: null, left: null },
+  left: { val: 1, right: null, left: null }
+}
 node2 = {
   val: 5,
-  right: { val: 4, right: { val: 6, right: null, left: null }, left: { val: 3, right: null, left: null } },
+  right: {
+    val: 4,
+    right: { val: 6, right: null, left: null },
+    left: { val: 3, right: null, left: null }
+  },
   left: { val: 1, right: null, left: null }
 }
 
 node3 = {
   val: 5,
-  right: { val: 8, right: { val: 6, right: null, left: null }, left: { val: 4, right: null, left: null } },
+  right: {
+    val: 8,
+    right: { val: 6, right: null, left: null },
+    left: { val: 4, right: null, left: null }
+  },
   left: { val: 1, right: null, left: null }
 }
 
 node4 = {
   val: 10,
-  right: { val: 15, right: { val: 20, right: null, left: null }, left: { val: 6, right: null, left: null } },
+  right: {
+    val: 15,
+    right: { val: 20, right: null, left: null },
+    left: { val: 6, right: null, left: null }
+  },
   left: { val: 5, right: null, left: null }
 }
 
 node5 = {
   val: 10,
-  right: { val: 15, right: { val: 20, right: null, left: null }, left: { val: 6, right: null, left: null } },
-  left: { val: 5, right: { val: 7, right: null, left: null }, left: { val: 1, right: null, left: null } }
+  right: {
+    val: 15,
+    right: { val: 20, right: null, left: null },
+    left: { val: 6, right: null, left: null }
+  },
+  left: {
+    val: 5,
+    right: { val: 7, right: null, left: null },
+    left: { val: 1, right: null, left: null }
+  }
 }
 
 console.log(isValidBST(node1)) //true

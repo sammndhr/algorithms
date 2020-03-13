@@ -43,7 +43,14 @@ var assignBikes = function(workers, bikes) {
   }
   return res
 }
-const workers = [[0, 0], [1, 1], [2, 0]],
-  bikes = [[1, 0], [2, 2]]
+const workers = [
+    [0, 0],
+    [1, 1],
+    [2, 0]
+  ],
+  bikes = [
+    [1, 0],
+    [2, 2]
+  ]
 
 console.log(assignBikes(workers, bikes))

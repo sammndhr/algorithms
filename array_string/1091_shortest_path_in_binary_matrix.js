@@ -7,7 +7,16 @@ var shortestPathBinaryMatrix = function(grid) {
     last = len - 1
   if (grid[0][0] || grid[last][last]) return -1
   const queue = [{ coord: [0, 0], k: 1 }],
-    directions = [[-1, -1], [-1, 0], [-1, 1], [0, 1], [1, 1], [1, 0], [1, -1], [0, -1]],
+    directions = [
+      [-1, -1],
+      [-1, 0],
+      [-1, 1],
+      [0, 1],
+      [1, 1],
+      [1, 0],
+      [1, -1],
+      [0, -1]
+    ],
     isValidCord = (x, y) => x >= 0 && x < len && y >= 0 && y < len
   grid[0][0] = 1
   while (queue.length) {
@@ -28,4 +37,9 @@ var shortestPathBinaryMatrix = function(grid) {
   return -1
 }
 
-console.log(shortestPathBinaryMatrix([[0, 1], [1, 0]]))
+console.log(
+  shortestPathBinaryMatrix([
+    [0, 1],
+    [1, 0]
+  ])
+)

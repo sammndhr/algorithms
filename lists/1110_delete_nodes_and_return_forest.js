@@ -63,8 +63,16 @@ console.log(
   delNodes(
     {
       val: 1,
-      right: { val: 3, right: { val: 7, right: null, left: null }, left: { val: 6, right: null, left: null } },
-      left: { val: 2, right: { val: 5, right: null, left: null }, left: { val: 4, right: null, left: null } }
+      right: {
+        val: 3,
+        right: { val: 7, right: null, left: null },
+        left: { val: 6, right: null, left: null }
+      },
+      left: {
+        val: 2,
+        right: { val: 5, right: null, left: null },
+        left: { val: 4, right: null, left: null }
+      }
     },
     [3, 5]
   )
@@ -75,7 +83,11 @@ console.log(
     {
       val: 1,
       right: null,
-      left: { val: 2, right: { val: 3, right: null, left: null }, left: { val: 4, right: null, left: null } }
+      left: {
+        val: 2,
+        right: { val: 3, right: null, left: null },
+        left: { val: 4, right: null, left: null }
+      }
     },
     [2, 3]
   )

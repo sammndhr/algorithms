@@ -136,16 +136,38 @@ var BFSelect = (root, callback) => {
 }
 const node1 = {
   val: 10,
-  right: { val: 15, right: { val: 20, right: null, left: null }, left: { val: 6, right: null, left: null } },
-  left: { val: 5, right: { val: 7, right: null, left: null }, left: { val: 1, right: null, left: null } }
+  right: {
+    val: 15,
+    right: { val: 20, right: null, left: null },
+    left: { val: 6, right: null, left: null }
+  },
+  left: {
+    val: 5,
+    right: { val: 7, right: null, left: null },
+    left: { val: 1, right: null, left: null }
+  }
 }
 
 // breathFirst(node1)
 node2 = {
   value: 1,
   children: [
-    { value: 2, children: [{ value: 4, children: [], depth: 2 }, { value: 5, children: [], depth: 2 }], depth: 1 },
-    { value: 3, children: [{ value: 6, children: [], depth: 2 }, { value: 7, children: [], depth: 2 }], depth: 1 }
+    {
+      value: 2,
+      children: [
+        { value: 4, children: [], depth: 2 },
+        { value: 5, children: [], depth: 2 }
+      ],
+      depth: 1
+    },
+    {
+      value: 3,
+      children: [
+        { value: 6, children: [], depth: 2 },
+        { value: 7, children: [], depth: 2 }
+      ],
+      depth: 1
+    }
   ],
   depth: 0
 }

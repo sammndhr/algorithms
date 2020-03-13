@@ -1,4 +1,3 @@
-
 ## Arrays and Strings
 
 1. [x] [1. Two Sum](https://leetcode.com/problems/two-sum)
@@ -51,9 +50,8 @@
 4. [x] [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/)
 5. [x] [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)
 6. [x] [109. Convert Sorted List to Binary Search Tree](https://leetcode.com/problems/convert-sorted-list-to-binary-search-tree/)
-7. [x] [366. find leaves of binary tree](https://leetcode.com/problems/find-leaves-of-binary-tree/)
-8. [x] [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
-9. [x] [865. Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
+7. [x] [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
+8. [x] [865. Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 
 ## Graph
 

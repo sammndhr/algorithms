@@ -15,7 +15,11 @@
  */
 
 const knows = (a, b) => {
-  const matrix = [[1, 1, 1], [1, 1, 0], [0, 0, 1]]
+  const matrix = [
+    [1, 1, 1],
+    [1, 1, 0],
+    [0, 0, 1]
+  ]
   return matrix[a] ? !!matrix[a][b] : false
 }
 
@@ -42,13 +46,18 @@ var solution = function(knows) {
         j++
       }
     }
-    const possibleCeleb = Object.keys(possibleCelebs).length === 1 ? parseFloat(Object.keys(possibleCelebs)[0]) : -1
+    const possibleCeleb =
+      Object.keys(possibleCelebs).length === 1
+        ? parseFloat(Object.keys(possibleCelebs)[0])
+        : -1
     if (possibleCeleb === -1) return possibleCeleb
     delete knowsHash[possibleCeleb]
     for (const key in knowsHash) {
       if (!knowsHash[key].includes(possibleCeleb)) return -1
     }
-    return Object.keys(possibleCelebs).length === 1 ? parseInt(Object.keys(possibleCelebs)[0]) : -1
+    return Object.keys(possibleCelebs).length === 1
+      ? parseInt(Object.keys(possibleCelebs)[0])
+      : -1
   }
 }
 
@@ -62,11 +71,20 @@ function solution(knows) {
       }
     }
     for (let i = 0; i < n; i++) {
-      if (i < candidate && (knows(candidate, i) || !knows(i, candidate))) return -1
+      if (i < candidate && (knows(candidate, i) || !knows(i, candidate)))
+        return -1
       if (i > candidate && !knows(i, candidate)) return -1
     }
     return c
   }
 }
 
-console.log(solution(knows)([[1, 1, 1], [1, 1, 0], [0, 0, 1]].length))
+console.log(
+  solution(knows)(
+    [
+      [1, 1, 1],
+      [1, 1, 0],
+      [0, 0, 1]
+    ].length
+  )
+)

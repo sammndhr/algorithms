@@ -23,13 +23,15 @@ const isValidCell = (board, row, col) => {
   }
   let upperDiagCheck = { col, row }
   while (upperDiagCheck['row'] >= 0 && upperDiagCheck['col'] >= 0) {
-    if (board[upperDiagCheck['row']][upperDiagCheck['col']] === 'Q') return false
+    if (board[upperDiagCheck['row']][upperDiagCheck['col']] === 'Q')
+      return false
     upperDiagCheck['row']--
     upperDiagCheck['col']--
   }
   let lowerDiagCheck = { col, row }
   while (lowerDiagCheck['row'] < board.length && lowerDiagCheck['col'] >= 0) {
-    if (board[lowerDiagCheck['row']][lowerDiagCheck['col']] === 'Q') return false
+    if (board[lowerDiagCheck['row']][lowerDiagCheck['col']] === 'Q')
+      return false
     lowerDiagCheck['row']++
     lowerDiagCheck['col']--
   }

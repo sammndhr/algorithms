@@ -111,11 +111,21 @@ var sortedListToBST = function(head) {
   return recurse(0, size - 1)
 }
 
-const node1 = { val: -10, next: { val: -3, next: { val: 0, next: { val: 5, next: { val: 9, next: null } } } } }
+const node1 = {
+  val: -10,
+  next: {
+    val: -3,
+    next: { val: 0, next: { val: 5, next: { val: 9, next: null } } }
+  }
+}
 
 console.log(JSON.stringify(sortedListToBST(node1)))
 
-const no = { val: 0, right: { val: 5, right: { val: 9, right: null, left: null }, left: null }, left: { val: -10, right: null, left: null } }
+const no = {
+  val: 0,
+  right: { val: 5, right: { val: 9, right: null, left: null }, left: null },
+  left: { val: -10, right: null, left: null }
+}
 const node = {
   val: 0,
   right: { val: 5, right: { val: 9, right: null, left: null }, left: null },
