@@ -1,3 +1,8 @@
+## Implementing Data Structures
+1. [x] Hash Tables
+
+# LEETCODE
+
 ## Arrays and Strings
 
 1. [x] [1. Two Sum](https://leetcode.com/problems/two-sum)
