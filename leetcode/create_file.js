@@ -19,4 +19,4 @@ const createFilename = str => {
 const name = process.argv[2]
 const file = createFilename(name)
 
-exec(`touch ${file} && code ${file} && node ${file}`)
+exec(`touch ${file} && code ${file}`)
