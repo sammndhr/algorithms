@@ -9,7 +9,7 @@ Time Complexity - O(n)
 Space complexity - O(n)
 */
 
-// test cases
+// Tests
 const testCases = [['test', true]]
 
 for (const test of testCases) {

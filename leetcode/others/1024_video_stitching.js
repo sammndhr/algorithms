@@ -29,7 +29,7 @@ var videoStitching = function(clips, T) {
   return currEnd >= T ? requiredClips : -1
 }
 
-//Test cases
+//tests
 const clips = [
     [0, 2],
     [4, 6],

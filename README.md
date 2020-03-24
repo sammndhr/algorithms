@@ -1,5 +1,24 @@
+# CRACKING THE CODING INTERVIEW
+
+**To create file**: From the chapter folder, run `ch_1_arrays_and_strings$ node ../create_file.js '9 String Rotation'`
+
+## Chapter 1 — Arrays and Strings
+
+1. [x] Is Unique
+2. [x] Check Permutation
+3. [x] URLify
+4. [x] Palindrome Permutation
+5. [x] One Away
+6. [x] String Compression
+7. [x] Rotate Matrix
+8. [x] Zero Matrix
+9. [x] String Rotation
+
 ## Implementing Data Structures
+
 1. [x] Hash Tables
+
+---
 
 # LEETCODE
 
@@ -69,11 +88,9 @@
 
 4. [x] [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 
-
 ## Binary Search
 
 1. [x] [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
-
 
 ## Others
 
