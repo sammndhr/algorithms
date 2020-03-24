@@ -13,15 +13,27 @@ class LinkedList {
   #size
 
   constructor() {
-    // The head and size property shouldn't be accessible outside the class
+    // The head and size property shouldn't be modifiable outside the class. So there should only be a getter
     this.#head = null //Class fields aren't supported by a lot of browsers. Use symbol instead to create private class variables.
     this.#size = 0
     // this[head] = null
   }
 
-  getSize() {
+  //getters
+  get head() {
+    return this.#head
+  }
+
+  get size() {
     return this.#size
   }
+
+  fromArray(array) {
+    for (const value of array) {
+      this.appendToTail(value)
+    }
+  }
+
   // T — O(1)
   prependToHead(value) {
     const node = new Node(value)
@@ -89,9 +101,42 @@ class LinkedList {
     return curr.value
   }
 
+  // T — O(n). Non recursive version of deleteNodeRecursive
+  deleteNode(value, deleteMultiple = false) {
+    let deleteCount = 0
+
+    let curr = this.#head,
+      prev = null
+
+    while (curr) {
+      if (curr.value === value) {
+        if (!prev) {
+          const temp = curr
+          curr = curr.next
+          temp.next = null
+          this.#head = curr
+        } else {
+          prev.next = curr.next
+          curr.next = null
+          curr = prev.next
+        }
+
+        this.#size--
+        deleteCount++
+
+        if (!deleteMultiple) return true
+      } else {
+        prev = curr
+        curr = curr.next
+      }
+    }
+
+    return !!deleteCount
+  }
+
+  /*
   // T — O(n)
   // S — O(n). Recursive deleteNode call for cases like 1 --> 1 --> 1 --> 1 --> null would result in O(n) space.
-  // TODO: Use while loop instead of recursion.
   deleteNode(value, deleteMultiple = false) {
     let deleteCount = 0
 
@@ -138,6 +183,7 @@ class LinkedList {
     //only return true if anything was actually deleted
     return !!deleteCount
   }
+  */
 
   search(value) {
     let curr = this.#head
@@ -163,51 +209,4 @@ class LinkedList {
   }
 }
 
-//Tests
-
-const ll = new LinkedList()
-ll.appendToTail(5)
-ll.appendToTail(3)
-ll.appendToTail(1)
-ll.appendToTail(4)
-ll.prependToHead(1)
-ll.prependToHead(1)
-
-console.log('Search:', 4, ll.search(4))
-console.log('Search:', 9, ll.search(9))
-console.log('--------------------------')
-console.log('Size:', ll.getSize())
-console.log('--------------------------')
-
-console.log('Print List:', ll.printList())
-console.log('Delete:', 1, ll.deleteNode(1, false))
-console.log('Print List:', ll.printList())
-console.log('--------------------------')
-
-ll.appendToTail(1)
-console.log('Print List:', ll.printList())
-console.log('Delete multiple:', 1, ll.deleteNode(1, true))
-console.log('Print List:', ll.printList())
-console.log('--------------------------')
-
-console.log('Delete From Head: ', ll.deleteFromHead())
-console.log('--------------------------')
-console.log('Print List:', ll.printList())
-console.log('Delete From Tail: ', ll.deleteFromTail())
-console.log('--------------------------')
-console.log('Print List:', ll.printList())
-console.log('Delete From Tail: ', ll.deleteFromTail())
-console.log('Print List:', ll.printList())
-
-const ll1 = new LinkedList()
-
-ll1.appendToTail(1)
-ll1.appendToTail(1)
-ll1.appendToTail(1)
-ll1.appendToTail(1)
-ll1.appendToTail(1)
-console.log('--------------------------')
-console.log("Delete 1's from linked list of only 1's")
-console.log('Print List:', ll1.printList())
-console.log('Delete multiple:', 1, ll1.deleteNode(1, true))
-console.log('Print List:', ll1.printList())
+module.exports = LinkedList
