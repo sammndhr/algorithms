@@ -21,7 +21,7 @@ Everything related to data structures and algorithms that I've coded.
 ## Implementing Data Structures
 
 1. [x] Hash Table
-2. [ ] Linked List (In Progress)
+2. [x] Linked List
 
 ## Leetcode
 
