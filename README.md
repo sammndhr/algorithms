@@ -1,8 +1,12 @@
-# CRACKING THE CODING INTERVIEW
+# Data Structures And Algorithms
+
+Everything related to data structures and algorithms that I've coded.
+
+## Cracking the Coding Interview
 
 **To create file**: From the chapter folder, run `ch_1_arrays_and_strings$ node ../create_file.js '9 String Rotation'`
 
-## Chapter 1 — Arrays and Strings
+### Chapter 1 — Arrays and Strings
 
 1. [x] Is Unique
 2. [x] Check Permutation
@@ -18,11 +22,9 @@
 
 1. [x] Hash Tables
 
----
+## Leetcode
 
-# LEETCODE
-
-## Arrays and Strings
+### Arrays and Strings
 
 1. [x] [1. Two Sum](https://leetcode.com/problems/two-sum)
 2. [x] [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray)
@@ -52,7 +54,7 @@
 26. [x] [3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
 27. [x] [973. k Closest Points](https://leetcode.com/problems/k-closest-points-to-origin/)
 
-## Lists
+### Lists
 
 1. [x] [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 2. [x] Clone Linked List
@@ -62,11 +64,11 @@
 6. [x] [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
 7. [x] [1110. Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)
 
-## Recursion
+### Recursion
 
 1. [x] [51. N-Queens](https://leetcode.com/problems/n-queens/description/)
 
-## Tree
+### Tree
 
 1. [x] [199. Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
 2. [x] [700. Search in a Binary Search Tree](https://leetcode.com/problems/search-in-a-binary-search-tree/)
@@ -77,22 +79,22 @@
 7. [x] [863. All Nodes Distance K in Binary Tree](https://leetcode.com/problems/all-nodes-distance-k-in-binary-tree/)
 8. [x] [865. Smallest Subtree with all the Deepest Nodes](https://leetcode.com/problems/smallest-subtree-with-all-the-deepest-nodes/)
 
-## Graph
+### Graph
 
 1. [x] [133. Clone Graph](https://leetcode.com/problems/clone-graph/)
 2. [x] [547. Friend Circles](https://leetcode.com/problems/friend-circles/)
 3. [x] [909. Snakes and Ladders](https://leetcode.com/problems/snakes-and-ladders/)
 4. [x] [277. Find the Celebrity](https://leetcode.com/problems/find-the-celebrity/)
 
-## Dynamic Programming
+### Dynamic Programming
 
 4. [x] [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/)
 
-## Binary Search
+### Binary Search
 
 1. [x] [875. Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/)
 
-## Others
+### Others
 
 1. [x] [29. Divide Two Integers](https://leetcode.com/problems/divide-two-integers/)
 2. [x] [881. Boats to Save People](https://leetcode.com/problems/boats-to-save-people/)
