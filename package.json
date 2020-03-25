@@ -1,0 +1,21 @@
+{
+  "name": "data_structures_and_algorithms",
+  "version": "1.0.0",
+  "description": "Everything related to data structures and algorithms that I've coded.",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrinalini-m/data_structures_and_algorithms.git"
+  },
+  "author": "Mrinalini 'Sam' Manandhar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrinalini-m/data_structures_and_algorithms/issues"
+  },
+  "homepage": "https://github.com/mrinalini-m/data_structures_and_algorithms#readme",
+  "devDependencies": {
+    "jest": "^25.1.0"
+  }
+}

@@ -1,4 +1,5 @@
-// const head = Symbol('head') //To keep head as private in linked list
+const head = Symbol('head') //To keep head as private in linked list
+const size = Symbol('size') //To keep head as private in linked list
 
 class Node {
   constructor(value, next = null) {
@@ -9,23 +10,24 @@ class Node {
 
 class LinkedList {
   // Private static fields
-  #head
-  #size
+  // #head
+  // #size
 
   constructor() {
-    // The head and size property shouldn't be modifiable outside the class. So there should only be a getter
-    this.#head = null //Class fields aren't supported by a lot of browsers. Use symbol instead to create private class variables.
-    this.#size = 0
-    // this[head] = null
+    // The head and size property shouldn't be modifiable outside the class. So there should only be a getter. Class fields aren't supported by a lot of browsers. Use symbol instead to create private class variables.
+    // this.#head = null
+    // this.#size = 0
+    this[head] = null
+    this[size] = 0
   }
 
   //getters
   get head() {
-    return this.#head
+    return this[head]
   }
 
   get size() {
-    return this.#size
+    return this[size]
   }
 
   fromArray(array) {
@@ -38,53 +40,51 @@ class LinkedList {
   prependToHead(value) {
     const node = new Node(value)
 
-    if (this.#head == null) this.#head = node
+    if (this[head] == null) this[head] = node
     else {
-      const prevHead = this.#head
-      this.#head = node
-      this.#head.next = prevHead
+      const prevHead = this[head]
+      this[head] = node
+      this[head].next = prevHead
     }
 
-    this.#size++
+    this[size]++
   }
 
   // T — O(n)
   appendToTail(value) {
     const node = new Node(value)
 
-    if (this.#head == null) this.#head = node
+    if (this[head] == null) this[head] = node
     else {
-      let curr = this.#head
+      let curr = this[head]
       while (curr.next) {
         curr = curr.next
       }
       curr.next = node
     }
 
-    this.#size++
+    this[size]++
   }
 
   // T — O(1)
   deleteFromHead() {
-    const currHead = this.#head
+    const currHead = this[head]
     if (!currHead) return null
 
-    this.#head = currHead.next
-    currHead.next = null
-
-    this.#size--
+    this[head] = currHead.next
+    this[size]--
     return currHead.value
   }
 
   // T — O(n)
   deleteFromTail() {
-    let curr = this.#head
+    let curr = this[head]
 
     if (!curr) return null
 
     //Handle case of single node in linked list
     if (!curr.next) {
-      this.#head = null
+      this[head] = null
       return curr.value
     }
 
@@ -97,7 +97,7 @@ class LinkedList {
 
     prev.next = null
 
-    this.#size--
+    this[size]--
     return curr.value
   }
 
@@ -105,23 +105,24 @@ class LinkedList {
   deleteNode(value, deleteMultiple = false) {
     let deleteCount = 0
 
-    let curr = this.#head,
+    let curr = this[head],
       prev = null
 
     while (curr) {
       if (curr.value === value) {
         if (!prev) {
-          const temp = curr
+          //Don't need to garbage collect. This is Javascript, not C++
+          // const temp = curr
           curr = curr.next
-          temp.next = null
-          this.#head = curr
+          // temp.next = null
+          this[head] = curr
         } else {
           prev.next = curr.next
-          curr.next = null
+          // curr.next = null
           curr = prev.next
         }
 
-        this.#size--
+        this[size]--
         deleteCount++
 
         if (!deleteMultiple) return true
@@ -141,7 +142,7 @@ class LinkedList {
     let deleteCount = 0
 
     const recursiveDelete = () => {
-      let head = this.#head
+      let head = this[head]
 
       if (!head) return false
 
@@ -157,7 +158,7 @@ class LinkedList {
         }
       }
 
-      let curr = this.#head,
+      let curr = this[head],
         prev = null
 
       while (curr) {
@@ -167,7 +168,7 @@ class LinkedList {
           curr.next = null
           curr = prev.next
 
-          this.#size--
+          this[size]--
           deleteCount++
 
           if (!deleteMultiple) return
@@ -186,7 +187,7 @@ class LinkedList {
   */
 
   search(value) {
-    let curr = this.#head
+    let curr = this[head]
 
     while (curr) {
       if (curr.value === value) return true
@@ -198,7 +199,7 @@ class LinkedList {
 
   printList() {
     const result = []
-    let curr = this.#head
+    let curr = this[head]
 
     while (curr) {
       result.push(curr.value)
