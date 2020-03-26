@@ -18,6 +18,17 @@ Everything related to data structures and algorithms that I've coded.
 8. [x] Zero Matrix
 9. [x] String Rotation
 
+### Chapter 2 — Linked Lists
+
+1. [x] Remove Dups
+2. [x] Return Kth to Last
+3. [x] Delete Middle Node
+4. [x] Partition
+5. [ ] Sum Lists - wip
+6. [ ] Palindrome
+7. [ ] Intersection
+8. [ ] Loop Detection
+
 ## Implementing Data Structures
 
 1. [x] Hash Table
@@ -64,6 +75,7 @@ Everything related to data structures and algorithms that I've coded.
 5. [x] [24. Swap Nodes in Pairs](https://leetcode.com/problems/swap-nodes-in-pairs/)
 6. [x] [138. Copy List with Random Pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
 7. [x] [1110. Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/)
+8. [x] [83. Remove Duplicates from Sorted List](https://leetcode.com/problems/remove-duplicates-from-sorted-list/)
 
 ### Recursion
 
