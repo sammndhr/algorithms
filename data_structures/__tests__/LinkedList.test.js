@@ -6,47 +6,47 @@ describe('head, size, print, search', () => {
   ll.fromArray(testList)
 
   test('gets head of linked list', () => {
-    expect(ll.head).toEqual({ value: 5, next: { value: 3, next: null } })
+    expect(ll.head).toEqual({ val: 5, next: { val: 3, next: null } })
   })
 
   test('does not mutate head of linked list', () => {
     ll.head = null
-    expect(ll.head).toEqual({ value: 5, next: { value: 3, next: null } })
+    expect(ll.head).toEqual({ val: 5, next: { val: 3, next: null } })
   })
 
   test('gets size of linked list', () => {
     expect(ll.size).toBe(2)
   })
 
-  test('prints all node values as an array', () => {
+  test('prints all node vals as an array', () => {
     expect(ll.printList()).toEqual(testList)
   })
 
-  test('searches linked list and returns true if given value exists', () => {
+  test('searches linked list and returns true if given val exists', () => {
     expect(ll.search(5)).toBe(true)
   })
 
-  test('searches linked list and returns false if given value does not exist', () => {
+  test('searches linked list and returns false if given val does not exist', () => {
     expect(ll.search(1)).toBe(false)
   })
 })
 
 describe('add', () => {
-  test('appends nodes to end of linked list from values of array', () => {
+  test('appends nodes to end of linked list from vals of array', () => {
     const ll = new LinkedList(),
       testList = [5, 3]
     ll.fromArray(testList)
-    expect(ll.head).toEqual({ value: 5, next: { value: 3, next: null } })
+    expect(ll.head).toEqual({ val: 5, next: { val: 3, next: null } })
   })
 
-  test('prepends node of given value to head of linked list ', () => {
+  test('prepends node of given val to head of linked list ', () => {
     const ll = new LinkedList()
     ll.fromArray([2])
     ll.prependToHead(1)
     expect(ll.printList()).toEqual([1, 2])
   })
 
-  test('appends node of given value to tail of linked list ', () => {
+  test('appends node of given val to tail of linked list ', () => {
     const ll = new LinkedList()
     ll.fromArray([1])
     ll.appendToTail(2)
@@ -55,7 +55,7 @@ describe('add', () => {
 })
 
 describe('delete from head', () => {
-  test('deletes head node of linked list if node does not equal null and returns deleted node value', () => {
+  test('deletes head node of linked list if node does not equal null and returns deleted node val', () => {
     const ll = new LinkedList(),
       testList = [5, 3]
     ll.fromArray(testList)
@@ -69,7 +69,7 @@ describe('delete from head', () => {
 })
 
 describe('delete from tail', () => {
-  test('deletes tail node of linked list if node does not equal null and returns deleted node value', () => {
+  test('deletes tail node of linked list if node does not equal null and returns deleted node val', () => {
     const ll = new LinkedList(),
       testList = [5, 3]
     ll.fromArray(testList)
@@ -82,15 +82,15 @@ describe('delete from tail', () => {
   })
 })
 
-describe('delete node of given value', () => {
-  test('deletes first node that matches the given value', () => {
+describe('delete node of given val', () => {
+  test('deletes first node that matches the given val', () => {
     const ll = new LinkedList(),
       testList = [1, 2, 1, 3]
     ll.fromArray(testList)
     expect(ll.deleteNode(1, false)).toBe(true)
   })
 
-  test('deletes only the first node that matches the given value', () => {
+  test('deletes only the first node that matches the given val', () => {
     const ll = new LinkedList(),
       testList = [1, 2, 1, 3]
     ll.fromArray(testList)
@@ -98,7 +98,7 @@ describe('delete node of given value', () => {
     expect(ll.printList()).toEqual([2, 1, 3])
   })
 
-  test('deletes all nodes that matches the given value', () => {
+  test('deletes all nodes that matches the given val', () => {
     const ll = new LinkedList(),
       testList = [1, 2, 1, 3]
     ll.fromArray(testList)
@@ -106,7 +106,7 @@ describe('delete node of given value', () => {
     expect(ll.printList()).toEqual([2, 3])
   })
 
-  test('returns false if node of given value is not found', () => {
+  test('returns false if node of given val is not found', () => {
     const ll = new LinkedList(),
       testList = [1, 2, 1, 3]
     ll.fromArray(testList)

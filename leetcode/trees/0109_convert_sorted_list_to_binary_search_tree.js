@@ -121,19 +121,19 @@ const node1 = {
 
 console.log(JSON.stringify(sortedListToBST(node1)))
 
-const no = {
-  val: 0,
-  right: { val: 5, right: { val: 9, right: null, left: null }, left: null },
-  left: { val: -10, right: null, left: null }
-}
-const node = {
-  val: 0,
-  right: { val: 5, right: { val: 9, right: null, left: null }, left: null },
-  left: { val: -10, right: { val: -3, right: null, left: null }, left: null }
-}
+// const no = {
+//   val: 0,
+//   right: { val: 5, right: { val: 9, right: null, left: null }, left: null },
+//   left: { val: -10, right: null, left: null }
+// }
+// const node = {
+//   val: 0,
+//   right: { val: 5, right: { val: 9, right: null, left: null }, left: null },
+//   left: { val: -10, right: { val: -3, right: null, left: null }, left: null }
+// }
 
-const node1 = {
-  val: 0,
-  right: { val: 5, right: { val: 9, right: null, left: null }, left: null },
-  left: { val: -10, right: { val: -3, right: null, left: null }, left: null }
-}
+// const node1 = {
+//   val: 0,
+//   right: { val: 5, right: { val: 9, right: null, left: null }, left: null },
+//   left: { val: -10, right: { val: -3, right: null, left: null }, left: null }
+// }

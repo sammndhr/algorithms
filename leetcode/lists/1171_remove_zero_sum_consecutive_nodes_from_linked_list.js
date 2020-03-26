@@ -3,7 +3,7 @@
  * @return {ListNode}
  */
 
-const { ListNode } = require('./utils.js')
+const { ListNode } = require('./../../utils')
 // https://leetcode.com/problems/remove-zero-sum-consecutive-nodes-from-linked-list/discuss/366350/C%2B%2B-O(n)-(explained-with-pictures)
 var removeZeroSumSublists = function(head) {
   const root = new ListNode(0),

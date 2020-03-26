@@ -10,7 +10,7 @@
  * @return {TreeNode}
  */
 
-const TreeNode = require('./utils.js')
+const { TreeNode } = require('../../utils')
 
 var subtreeWithAllDeepest = function(root) {
   let deepest = 0,

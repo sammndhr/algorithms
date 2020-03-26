@@ -4,7 +4,7 @@
  * @return {ListNode}
  */
 
-const { ListNode, arrToLL, LLToArr } = require('./utils.js')
+const { ListNode, arrToLL, printList } = require('./../../utils')
 
 //iterative mine
 var mergeTwoLists = function(l1, l2) {
@@ -67,9 +67,9 @@ var mergeTwoListsRecurse = function(l1, l2) {
 
 const l1 = arrToLL([5])
 const l2 = arrToLL([1, 2, 4])
-console.log(LLToArr(mergeTwoLists(l1, l2)))
+printList(mergeTwoLists(l1, l2))
 
 arr1 = [-9, -7, -3, -3, -1, 2, 3]
 arr2 = [-7, -7, -6, -6, -5, -3, 2, 4]
 sortedList = mergeTwoLists(arrToLL(arr1), arrToLL(arr2))
-console.log(LLToArr(sortedList))
+printList(sortedList)

@@ -2,8 +2,8 @@ const head = Symbol('head') //To keep head as private in linked list
 const size = Symbol('size') //To keep head as private in linked list
 
 class Node {
-  constructor(value, next = null) {
-    this.value = value
+  constructor(val, next = null) {
+    this.val = val
     this.next = next
   }
 }
@@ -31,14 +31,14 @@ class LinkedList {
   }
 
   fromArray(array) {
-    for (const value of array) {
-      this.appendToTail(value)
+    for (const val of array) {
+      this.appendToTail(val)
     }
   }
 
   // T — O(1)
-  prependToHead(value) {
-    const node = new Node(value)
+  prependToHead(val) {
+    const node = new Node(val)
 
     if (this[head] == null) this[head] = node
     else {
@@ -51,8 +51,8 @@ class LinkedList {
   }
 
   // T — O(n)
-  appendToTail(value) {
-    const node = new Node(value)
+  appendToTail(val) {
+    const node = new Node(val)
 
     if (this[head] == null) this[head] = node
     else {
@@ -73,7 +73,7 @@ class LinkedList {
 
     this[head] = currHead.next
     this[size]--
-    return currHead.value
+    return currHead.val
   }
 
   // T — O(n)
@@ -85,7 +85,7 @@ class LinkedList {
     //Handle case of single node in linked list
     if (!curr.next) {
       this[head] = null
-      return curr.value
+      return curr.val
     }
 
     let prev = null
@@ -98,18 +98,18 @@ class LinkedList {
     prev.next = null
 
     this[size]--
-    return curr.value
+    return curr.val
   }
 
   // T — O(n). Non recursive version of deleteNodeRecursive
-  deleteNode(value, deleteMultiple = false) {
+  deleteNode(val, deleteMultiple = false) {
     let deleteCount = 0
 
     let curr = this[head],
       prev = null
 
     while (curr) {
-      if (curr.value === value) {
+      if (curr.val === val) {
         if (!prev) {
           //Don't need to garbage collect. This is Javascript, not C++
           // const temp = curr
@@ -138,7 +138,7 @@ class LinkedList {
   /*
   // T — O(n)
   // S — O(n). Recursive deleteNode call for cases like 1 --> 1 --> 1 --> 1 --> null would result in O(n) space.
-  deleteNode(value, deleteMultiple = false) {
+  deleteNode(val, deleteMultiple = false) {
     let deleteCount = 0
 
     const recursiveDelete = () => {
@@ -147,7 +147,7 @@ class LinkedList {
       if (!head) return false
 
       //Using this.deleteFromHead() to delete from head
-      if (head.value === value) {
+      if (head.val === val) {
         this.deleteFromHead()
         deleteCount++
 
@@ -162,8 +162,8 @@ class LinkedList {
         prev = null
 
       while (curr) {
-        if (curr.value === value) {
-          //this won't throw error even though first call runs with prev = null cause we've already handled case of head.value === value
+        if (curr.val === val) {
+          //this won't throw error even though first call runs with prev = null cause we've already handled case of head.val === val
           prev.next = curr.next
           curr.next = null
           curr = prev.next
@@ -186,11 +186,11 @@ class LinkedList {
   }
   */
 
-  search(value) {
+  search(val) {
     let curr = this[head]
 
     while (curr) {
-      if (curr.value === value) return true
+      if (curr.val === val) return true
       curr = curr.next
     }
 
@@ -202,10 +202,10 @@ class LinkedList {
     let curr = this[head]
 
     while (curr) {
-      result.push(curr.value)
+      result.push(curr.val)
       curr = curr.next
     }
-
+    console.log(result)
     return result
   }
 }

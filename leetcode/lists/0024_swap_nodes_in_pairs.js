@@ -3,7 +3,7 @@
  * @return {ListNode}
  */
 
-const { ListNode, arrToLL, LLToArr } = require('./utils.js')
+const { ListNode, arrToLL, printList } = require('./../../utils')
 var swapPairs = function(head) {
   if (!head || !head.next) return head
   let node1 = head,
@@ -26,9 +26,9 @@ var swapPairs = function(head) {
   return newHead
 }
 
-console.log(LLToArr(swapPairs(arrToLL([1, 2, 3, 4, 5]))))
-console.log(LLToArr(swapPairs(arrToLL([1, 2, 3, 4]))))
-console.log(LLToArr(swapPairs(arrToLL([1, 2, 3]))))
-console.log(LLToArr(swapPairs(arrToLL([1, 2]))))
-console.log(LLToArr(swapPairs(arrToLL([1]))))
-console.log(LLToArr(swapPairs(arrToLL([]))))
+printList(swapPairs(arrToLL([1, 2, 3, 4, 5])))
+printList(swapPairs(arrToLL([1, 2, 3, 4])))
+printList(swapPairs(arrToLL([1, 2, 3])))
+printList(swapPairs(arrToLL([1, 2])))
+printList(swapPairs(arrToLL([1])))
+printList(swapPairs(arrToLL([])))

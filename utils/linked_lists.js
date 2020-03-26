@@ -23,4 +23,11 @@ function LLToArr(head) {
   }
   return arr
 }
-module.exports = { ListNode, arrToLL, LLToArr }
+
+function printList(head) {
+  const arr = LLToArr(head)
+  console.log(arr)
+  return arr
+}
+
+module.exports = { ListNode, arrToLL, LLToArr, printList }

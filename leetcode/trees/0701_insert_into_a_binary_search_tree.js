@@ -10,7 +10,7 @@
  * @param {number} val
  * @return {TreeNode}
  */
-const TreeNode = require('./utils.js')
+const { TreeNode } = require('../../utils')
 
 //recursive
 //Time Complexity - O(H) height of tree, so O(N) worst case and Olog(N) best case
