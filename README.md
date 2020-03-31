@@ -2,6 +2,14 @@
 
 Everything related to data structures and algorithms that I've coded.
 
+**Usage**
+
+1. Clone repo
+1. run `npm install` or `yarn` (to run tests for data_structures). Skip if not testing data_structures.
+1. To test individual problems: Eg, run `node leetcode/array_string/0001_two_sum.js`.
+
+> Note: Install [node.js](https://nodejs.org/en/)
+
 ## Cracking the Coding Interview
 
 **To create file**: From the chapter folder, run `ch_1_arrays_and_strings$ node ../create_file.js '9 String Rotation'`
@@ -33,6 +41,8 @@ Everything related to data structures and algorithms that I've coded.
 
 1. [x] Hash Table
 2. [x] Linked List
+3. [x] Stack
+4. [x] Queue
 
 ## Leetcode
 
