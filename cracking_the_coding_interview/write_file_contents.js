@@ -1,5 +1,6 @@
 const writeFileContents = functionName => {
   const fileContents = `const { LinkedList } = require('../../data_structures/modules')
+  const { ListNode, compareObjects, LLToArr } = require('../../utils')
 
 function ${functionName}(head) {
   let curr = head
@@ -13,14 +14,14 @@ Space complexity - O(n)
 
 // Tests
 
-const ll = new LinkedList()
-ll.fromArray([1, 2, 3, 1, 2, 5])
+const ll1 = new LinkedList()
+ll1.fromArray([1, 2, 3, 1, 2, 5])
 
 const ll2 = new LinkedList()
 ll2.fromArray([1, 1, 2])
 
 const testCases = [
-  [ll, []],
+  [ll1, []],
   [ll2, []]
 ]
 

@@ -1,12 +1,16 @@
 const { LinkedList } = require('../modules')
 
-describe('head, size, print, search', () => {
+describe('head, tail, size, print, search', () => {
   const ll = new LinkedList(),
     testList = [5, 3]
   ll.fromArray(testList)
 
   test('gets head of linked list', () => {
     expect(ll.head).toEqual({ val: 5, next: { val: 3, next: null } })
+  })
+
+  test('gets tail of linked list', () => {
+    expect(ll.getTail()).toEqual({ val: 3, next: null })
   })
 
   test('does not mutate head of linked list', () => {

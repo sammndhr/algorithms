@@ -24,10 +24,10 @@ Everything related to data structures and algorithms that I've coded.
 2. [x] Return Kth to Last
 3. [x] Delete Middle Node
 4. [x] Partition
-5. [ ] Sum Lists - wip
-6. [ ] Palindrome
-7. [ ] Intersection
-8. [ ] Loop Detection
+5. [x] Sum Lists
+6. [x] Palindrome
+7. [x] Intersection
+8. [x] Loop Detection
 
 ## Implementing Data Structures
 

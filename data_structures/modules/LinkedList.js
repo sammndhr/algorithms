@@ -208,6 +208,15 @@ class LinkedList {
     console.log(result)
     return result
   }
+
+  getTail() {
+    let curr = this[head]
+    if (!curr) return null
+    while (curr.next) {
+      curr = curr.next
+    }
+    return curr
+  }
 }
 
 module.exports = LinkedList
