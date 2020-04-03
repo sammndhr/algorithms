@@ -18,7 +18,7 @@ Will create an array that is 3 * 4 in size and will partition the stack into thr
 |     2     |   1    |     4      |
 
 */
-
+// converted to js from book.
 const FixedMultiStack = (function() {
   const numberOfStacks = 3
   let stackCapacity, values, sizes

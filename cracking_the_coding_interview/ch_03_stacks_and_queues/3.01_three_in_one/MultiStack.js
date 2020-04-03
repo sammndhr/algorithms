@@ -36,6 +36,7 @@ stack 0 is full, but capacity has increased
      
 */
 
+// converted to js from book.
 const MultiStack = (function() {
   let values = [],
     info

@@ -39,12 +39,12 @@ The resulting file will be `1.09_string_rotation.js`. Omitting the optional chap
 7. [x] Intersection
 8. [x] Loop Detection
 
-### Chapter 2 — Stacks and Queues
+### Chapter 3 — Stacks and Queues
 
 1. [x] Three in One
 2. [x] Stack Min
-3. [ ] Stack of Plates
-4. [ ] Queue via Stacks
+3. [x] Stack of Plates
+4. [x] Queue via Stacks
 5. [ ] Sort Stack
 6. [ ] Animal Shelter
 
