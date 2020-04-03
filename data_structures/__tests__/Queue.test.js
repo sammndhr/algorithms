@@ -8,8 +8,8 @@ test('creates a new instance of Queue', () => {
 describe('printQueue', () => {
   test('prints all items of queue as an array', () => {
     const queue = new Queue()
-    queue.add(1)
-    queue.add(2)
+    queue.enqueue(1)
+    queue.enqueue(2)
     expect(queue.printQueue()).toEqual([1, 2])
   })
 })
@@ -17,30 +17,30 @@ describe('printQueue', () => {
 describe('peek', () => {
   test('returns first item of queue if it exists', () => {
     const queue = new Queue()
-    queue.add(1)
+    queue.enqueue(1)
     expect(queue.peek()).toBe(1)
   })
 
   test('returns null if queue is empty', () => {
     const queue = new Queue()
-    queue.add(1)
+    queue.enqueue(1)
     expect(queue.peek()).toBe(1)
   })
 })
 
-describe('add', () => {
+describe('enqueue', () => {
   test('adds item to end of queue', () => {
     const queue = new Queue()
-    queue.add(1)
-    queue.add(2)
+    queue.enqueue(1)
+    queue.enqueue(2)
     const arr = queue.printQueue(),
       len = arr.length
     expect(arr[len - 1]).toBe(2)
   })
   test('does not add item to beginning of queue', () => {
     const queue = new Queue()
-    queue.add(1)
-    queue.add(2)
+    queue.enqueue(1)
+    queue.enqueue(2)
     expect(queue.peek()).toBe(1)
   })
 })
@@ -48,22 +48,22 @@ describe('add', () => {
 describe('remove', () => {
   test('removes and return first item of queue', () => {
     const queue = new Queue()
-    queue.add(1)
-    queue.add(2)
-    expect(queue.remove()).toBe(1)
+    queue.enqueue(1)
+    queue.enqueue(2)
+    expect(queue.dequeue()).toBe(1)
   })
 
   test('removes the first item of queue and modifies first to be the next item', () => {
     const queue = new Queue()
-    queue.add(1)
-    queue.add(2)
-    queue.remove()
+    queue.enqueue(1)
+    queue.enqueue(2)
+    queue.dequeue()
     expect(queue.peek()).toBe(2)
   })
 
   test('return null if queue is empty', () => {
     const queue = new Queue()
-    expect(queue.remove()).toBe(null)
+    expect(queue.dequeue()).toBe(null)
   })
 })
 
@@ -75,8 +75,8 @@ describe('isEmpty', () => {
 
   test('returns false if queue is not empty', () => {
     const queue = new Queue()
-    queue.add(1)
-    queue.add(2)
+    queue.enqueue(1)
+    queue.enqueue(2)
     expect(queue.isEmpty()).toBe(false)
   })
 })

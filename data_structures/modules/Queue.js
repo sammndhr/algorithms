@@ -14,7 +14,7 @@ const Queue = (function() {
       last = null
     }
 
-    add(item) {
+    enqueue(item) {
       const node = new QueueNode(item)
       if (last) {
         last.next = node
@@ -24,7 +24,7 @@ const Queue = (function() {
       if (!first) first = last
     }
 
-    remove() {
+    dequeue() {
       if (!first) return null
       const data = first.data
       first = first.next
