@@ -43,8 +43,11 @@ const Stack = (function() {
         result.push(curr.data)
         curr = curr.next
       }
-      console.log(result)
+      // console.log(result)
       return result
+    }
+    stackToString() {
+      return JSON.stringify(this.printStack())
     }
   }
 

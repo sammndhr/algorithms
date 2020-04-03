@@ -1,6 +1,5 @@
 const Queue = (function() {
-  const first = Symbol('first') //To keep frist as private in queue
-  const last = Symbol('last')
+  let first, last //Look in ./LinkedList.js to see other ways of declaring private static fields https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Private_fields
 
   class QueueNode {
     constructor(data, next = null) {
@@ -11,40 +10,40 @@ const Queue = (function() {
 
   class Queue {
     constructor() {
-      this[first] = null
-      this[last] = null
+      first = null
+      last = null
     }
 
     add(item) {
       const node = new QueueNode(item)
-      if (this[last]) {
-        this[last].next = node
+      if (last) {
+        last.next = node
       }
-      this[last] = node
+      last = node
 
-      if (!this[first]) this[first] = this[last]
+      if (!first) first = last
     }
 
     remove() {
-      if (!this[first]) return null
-      const data = this[first].data
-      this[first] = this[first].next
-      if (!this[first]) last = null
+      if (!first) return null
+      const data = first.data
+      first = first.next
+      if (!first) last = null
       return data
     }
 
     peek() {
-      if (!this[first]) return null
-      return this[first].data
+      if (!first) return null
+      return first.data
     }
 
     isEmpty() {
-      return this[first] === null
+      return first === null
     }
 
     printQueue() {
       const result = []
-      let curr = this[first]
+      let curr = first
 
       while (curr) {
         result.push(curr.data)

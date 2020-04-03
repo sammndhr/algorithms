@@ -12,7 +12,9 @@ Everything related to data structures and algorithms that I've coded.
 
 ## Cracking the Coding Interview
 
-**To create file**: From the chapter folder, run `ch_1_arrays_and_strings$ node ../create_file.js '9 String Rotation'`
+**To create file**: From the chapter folder, run `ch_01_arrays_and_strings$ node ../create_file.js '9 String Rotation' 1`.
+
+The resulting file will be `1.09_string_rotation.js`. Omitting the optional chapter `1` at the end, will result in the filename `09_string_rotation.js`.
 
 ### Chapter 1 — Arrays and Strings
 
@@ -36,6 +38,15 @@ Everything related to data structures and algorithms that I've coded.
 6. [x] Palindrome
 7. [x] Intersection
 8. [x] Loop Detection
+
+### Chapter 2 — Stacks and Queues
+
+1. [x] Three in One
+2. [x] Stack Min
+3. [ ] Stack of Plates
+4. [ ] Queue via Stacks
+5. [ ] Sort Stack
+6. [ ] Animal Shelter
 
 ## Implementing Data Structures
 

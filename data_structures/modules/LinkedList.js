@@ -1,6 +1,6 @@
 const LinkedList = (function() {
   const head = Symbol('head') //To keep head as private in linked list
-  const size = Symbol('size') //To keep head as private in linked list
+  const size = Symbol('size')
 
   class ListNode {
     constructor(val, next = null) {

@@ -1,11 +1,10 @@
 const exec = require('child_process').exec
 
-const createFilename = str => {
-  const filename = str
-  return `${filename
-    .toLowerCase()
-    .split(' ')
-    .join('_')}.js`
+const createFilename = (str, chap) => {
+  let filename = chap ? `${chap}.` : ''
+  const arr = str.toLowerCase().split(' ')
+  arr[0] = arr[0].length === 1 ? `0${arr[0]}` : arr[0]
+  return `${filename}${arr.join('_')}.js`
 }
 
 const createFunctionName = str => {
@@ -22,7 +21,8 @@ const createFunctionName = str => {
   return functionName
 }
 const name = process.argv[2]
-const file = createFilename(name)
+const chap = process.argv[3]
+const file = createFilename(name, chap)
 const functionName = createFunctionName(name)
 exec(
   `touch ${file} && code ${file} && node ./../write_file_contents.js ${functionName} > ${file}`
