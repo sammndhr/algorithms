@@ -136,57 +136,6 @@ const LinkedList = (function() {
       return !!deleteCount
     }
 
-    /*
-    // T — O(n)
-    // S — O(n). Recursive deleteNode call for cases like 1 --> 1 --> 1 --> 1 --> null would result in O(n) space.
-    deleteNode(val, deleteMultiple = false) {
-      let deleteCount = 0
-  
-      const recursiveDelete = () => {
-        let head = this[head]
-  
-        if (!head) return false
-  
-        //Using this.deleteFromHead() to delete from head
-        if (head.val === val) {
-          this.deleteFromHead()
-          deleteCount++
-  
-          if (!deleteMultiple) return
-          else {
-            // Call recursiveDelete recursively for cases like deleting multiple 1's from 1 --> 1 --> 1 --> 3 --> null
-            recursiveDelete()
-          }
-        }
-  
-        let curr = this[head],
-          prev = null
-  
-        while (curr) {
-          if (curr.val === val) {
-            //this won't throw error even though first call runs with prev = null cause we've already handled case of head.val === val
-            prev.next = curr.next
-            curr.next = null
-            curr = prev.next
-  
-            this[size]--
-            deleteCount++
-  
-            if (!deleteMultiple) return
-          } else {
-            prev = curr
-            curr = curr.next
-          }
-        }
-      }
-  
-      recursiveDelete()
-  
-      //only return true if anything was actually deleted
-      return !!deleteCount
-    }
-    */
-
     search(val) {
       let curr = this[head]
 

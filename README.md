@@ -45,8 +45,8 @@ The resulting file will be `1.09_string_rotation.js`. Omitting the optional chap
 2. [x] Stack Min
 3. [x] Stack of Plates
 4. [x] Queue via Stacks
-5. [ ] Sort Stack
-6. [ ] Animal Shelter
+5. [x] Sort Stack
+6. [x] Animal Shelter
 
 ## Implementing Data Structures
 
