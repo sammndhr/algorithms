@@ -4,6 +4,7 @@ const Stack = require('./Stack')
 const Queue = require('./Queue')
 const TreeTraversal = require('./BinaryTreeTraversal')
 const BinarySearchTree = require('./BinarySearchTree')
+const Trie = require('./Trie')
 
 module.exports = {
   LinkedList,
@@ -11,5 +12,6 @@ module.exports = {
   Stack,
   Queue,
   ...TreeTraversal,
-  BinarySearchTree
+  BinarySearchTree,
+  Trie
 }

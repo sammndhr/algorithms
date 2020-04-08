@@ -48,6 +48,8 @@ The resulting file will be `1.09_string_rotation.js`. Omitting the optional chap
 5. [x] Sort Stack
 6. [x] Animal Shelter
 
+### Chapter 4 — Trees and Graphs
+
 ## Implementing Data Structures
 
 1. [x] Hash Table
