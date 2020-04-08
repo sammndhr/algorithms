@@ -54,6 +54,8 @@ The resulting file will be `1.09_string_rotation.js`. Omitting the optional chap
 2. [x] Linked List
 3. [x] Stack
 4. [x] Queue
+5. [x] Binary Search Tree
+6. [x] Tree Traversal (DFS, BFS)
 
 ## Leetcode
 
