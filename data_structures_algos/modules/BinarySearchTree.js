@@ -97,19 +97,27 @@ const BinarySearchTree = (() => {
     // tree traversals
     // returns array of vals
     printInOrder() {
-      return DFSIterative.inOrder(root)
+      const res = DFSIterative.inOrder(root)
+      console.log(res)
+      return res
     }
 
     printPreOrder() {
-      return DFSIterative.preOrder(root)
+      const res = DFSIterative.preOrder(root)
+      console.log(res)
+      return res
     }
 
     printPostOrder() {
-      return DFSIterative.postOrder(root)
+      const res = DFSIterative.postOrder(root)
+      console.log(res)
+      return res
     }
 
     printLevelOrder() {
-      return BFS(root)
+      const res = BFS(root)
+      console.log(res)
+      return res
     }
   }
   return BinarySearchTree
