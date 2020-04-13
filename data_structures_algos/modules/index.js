@@ -6,14 +6,18 @@ const TreeTraversal = require('./BinaryTreeTraversal')
 const BinarySearchTree = require('./BinarySearchTree')
 const Trie = require('./Trie')
 const BinaryHeap = require('./BinaryHeap')
+const GraphTraversal = require('./GraphTraversal')
+const Graph = require('./Graph')
 
 module.exports = {
   LinkedList,
   HashTable,
   Stack,
   Queue,
-  ...TreeTraversal,
+  TreeTraversal,
   BinarySearchTree,
   Trie,
-  ...BinaryHeap
+  ...BinaryHeap,
+  GraphTraversal,
+  Graph,
 }

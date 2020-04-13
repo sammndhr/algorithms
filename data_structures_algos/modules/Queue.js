@@ -1,4 +1,4 @@
-const Queue = (function() {
+const Queue = (function () {
   let first, last //Look in ./LinkedList.js to see other ways of declaring private static fields https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Private_fields
 
   class QueueNode {
