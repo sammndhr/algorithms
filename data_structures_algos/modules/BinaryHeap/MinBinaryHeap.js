@@ -4,20 +4,33 @@
 
 // Source: https://eloquentjavascript.net/1st_edition/appendix2.html
 
-const MinBinaryHeap = (() => {
-  let content
-  const swap = (i, j) => {
-    const temp = content[i]
-    content[i] = content[j]
-    content[j] = temp
+class MinBinaryHeap {
+  #content
+  constructor() {
+    this.#content = []
+  }
+
+  get size() {
+    return this.#content.length
+  }
+
+  get min() {
+    return this.size ? this.#content[0] : null
+  }
+
+  // _methods are helpers. Change to private when private instance methods are supported
+  _swap(i, j) {
+    const temp = this.#content[i]
+    this.#content[i] = this.#content[j]
+    this.#content[j] = temp
   }
   /* bubbleUp 
     1. Compare item to parent and check if it's less than parent. 
     2. If it is less than parent, swap it. 
     3. Now, compare to the new parent and keep swapping until it either reaches the top of the heap or it is >= parent. 
-    */
-  const bubbleUp = i => {
-    const element = content[i]
+  */
+  _bubbleUp(i) {
+    const element = this.#content[i]
     /* 
       indexing from 0
       p is the index of the parent
@@ -31,10 +44,10 @@ const MinBinaryHeap = (() => {
      */
     while (i > 0) {
       const p = Math.floor((i - 1) / 2),
-        parent = content[p]
+        parent = this.#content[p]
 
       if (element < parent) {
-        swap(p, i)
+        this._swap(p, i)
         // make sure to change index to that of parent after swapping
         i = p
       } else {
@@ -43,9 +56,9 @@ const MinBinaryHeap = (() => {
     }
   }
 
-  const sinkDown = p => {
-    const element = content[p],
-      lastIndex = content.length - 1
+  _sinkDown(p) {
+    const element = this.#content[p],
+      lastIndex = this.#content.length - 1
 
     while (p < lastIndex) {
       // Info in getting index in bubbleUp
@@ -59,102 +72,87 @@ const MinBinaryHeap = (() => {
       // if element has left child, compare
       // if left child < element, set swapIndex to the left index (l) and min to left
       if (l <= lastIndex) {
-        left = content[l]
+        left = this.#content[l]
 
         if (left < element) swapIndex = l
         min = left
       }
 
       if (r <= lastIndex) {
-        right = content[r]
+        right = this.#content[r]
         // compare the right to the min so far to make sure the min of the three items gets bubbled up while the parent gets sunk
         if (right < min) swapIndex = r
       }
       // parent is smaller than both left and right child so break
       if (swapIndex == null) break
 
-      swap(p, swapIndex)
+      this._swap(p, swapIndex)
       // set the parent index to the swap index so it will continue to sink down
       p = swapIndex
     }
   }
 
-  class MinBinaryHeap {
-    constructor() {
-      content = []
-    }
+  printMinHeap() {
+    console.log(this.#content)
+    return this.#content
+  }
 
-    get size() {
-      return content.length
-    }
-
-    get min() {
-      return this.size ? content[0] : null
-    }
-
-    printMinHeap() {
-      console.log(content)
-      return content
-    }
-
-    /* insert
-    1. insert new item into content
+  /* insert
+    1. insert new item into this.#content
     2. bubble it up 
     */
-    insert(element) {
-      content.push(element)
-      bubbleUp(content.length - 1)
-    }
+  insert(element) {
+    this.#content.push(element)
+    this._bubbleUp(this.#content.length - 1)
+  }
 
-    /* extractMin
-    1. swap first and last items if content.length > 1 (or first !== last)
+  /* extractMin
+    1. swap first and last items if this.#content.length > 1 (or first !== last)
     2. pop out last item of array and save it in result
     3. If length is more than one, bubble the first item down
     4. Return the result that was saved 
     */
-    extractMin() {
-      if (content.length <= 0) return null //return null if array is empty
+  extractMin() {
+    if (this.#content.length <= 0) return null //return null if array is empty
 
-      const lastIndex = content.length - 1,
-        firstIndex = 0
+    const lastIndex = this.#content.length - 1,
+      firstIndex = 0
 
-      if (firstIndex !== lastIndex) swap(firstIndex, lastIndex)
+    if (firstIndex !== lastIndex) this._swap(firstIndex, lastIndex)
 
-      const result = content.pop()
+    const result = this.#content.pop()
 
-      if (content.length > 0) {
-        sinkDown(0)
-      }
-
-      return result
+    if (this.#content.length > 0) {
+      this._sinkDown(0)
     }
 
-    remove(element) {
-      for (let i = 0; i < this.size; i++) {
-        // if curr item doesn't match the element to remove, continue searching
-        if (content[i] !== element) continue
+    return result
+  }
 
-        // if it does match
-        const lastIndex = this.size - 1
-        // if it's the last item, pop it and break
-        if (i === lastIndex) {
-          content.pop()
-          break
-        }
-        // if it's not the last item
-        //  1. swap it with the last item
-        //  2. pop the swapped last item
-        //  3. Then call bubbleUp and sinkDown.
+  remove(element) {
+    for (let i = 0; i < this.size; i++) {
+      // if curr item doesn't match the element to remove, continue searching
+      if (this.#content[i] !== element) continue
 
-        swap(i, lastIndex)
-        content.pop()
-        bubbleUp(i)
-        sinkDown(i)
+      // if it does match
+      const lastIndex = this.size - 1
+      // if it's the last item, pop it and break
+      if (i === lastIndex) {
+        this.#content.pop()
         break
       }
+      // if it's not the last item
+      //  1. swap it with the last item
+      //  2. pop the swapped last item
+      //  3. Then call bubbleUp and sinkDown.
+
+      this._swap(i, lastIndex)
+      this.#content.pop()
+      this._bubbleUp(i)
+      this._sinkDown(i)
+      break
     }
   }
-  return MinBinaryHeap
-})()
+}
 
 module.exports = MinBinaryHeap

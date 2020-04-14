@@ -1,20 +1,32 @@
-const MaxBinaryHeap = (() => {
-  let content
-  const swap = (i, j) => {
-    const temp = content[i]
-    content[i] = content[j]
-    content[j] = temp
+class MaxBinaryHeap {
+  #content
+  constructor() {
+    this.#content = []
   }
 
-  const bubbleUp = i => {
-    const element = content[i]
+  get size() {
+    return this.#content.length
+  }
+
+  get max() {
+    return this.size ? this.#content[0] : null
+  }
+  // _methods are helpers. Change to private when private instance methods are supported
+  _swap(i, j) {
+    const temp = this.#content[i]
+    this.#content[i] = this.#content[j]
+    this.#content[j] = temp
+  }
+
+  _bubbleUp(i) {
+    const element = this.#content[i]
 
     while (i > 0) {
       const p = Math.floor((i - 1) / 2),
-        parent = content[p]
+        parent = this.#content[p]
 
       if (element > parent) {
-        swap(p, i)
+        this._swap(p, i)
 
         i = p
       } else {
@@ -23,9 +35,9 @@ const MaxBinaryHeap = (() => {
     }
   }
 
-  const sinkDown = p => {
-    const element = content[p],
-      lastIndex = content.length - 1
+  _sinkDown(p) {
+    const element = this.#content[p],
+      lastIndex = this.#content.length - 1
 
     while (p < lastIndex) {
       const r = 2 * p + 2,
@@ -36,86 +48,71 @@ const MaxBinaryHeap = (() => {
         right,
         min = element
       if (l <= lastIndex) {
-        left = content[l]
+        left = this.#content[l]
 
         if (left > element) swapIndex = l
         min = left
       }
 
       if (r <= lastIndex) {
-        right = content[r]
+        right = this.#content[r]
 
         if (right > min) swapIndex = r
       }
 
       if (swapIndex == null) break
 
-      swap(p, swapIndex)
+      this._swap(p, swapIndex)
 
       p = swapIndex
     }
   }
 
-  class MaxBinaryHeap {
-    constructor() {
-      content = []
+  printMaxHeap() {
+    console.log(this.#content)
+    return this.#content
+  }
+
+  insert(element) {
+    this.#content.push(element)
+    this._bubbleUp(this.#content.length - 1)
+  }
+
+  extractMax() {
+    if (this.#content.length <= 0) return null
+
+    const lastIndex = this.#content.length - 1,
+      firstIndex = 0
+
+    if (firstIndex !== lastIndex) this._swap(firstIndex, lastIndex)
+
+    const result = this.#content.pop()
+
+    if (this.#content.length > 0) {
+      this._sinkDown(0)
     }
 
-    get size() {
-      return content.length
-    }
+    return result
+  }
 
-    get max() {
-      return this.size ? content[0] : null
-    }
+  remove(element) {
+    for (let i = 0; i < this.size; i++) {
+      if (this.#content[i] !== element) continue
 
-    printMaxHeap() {
-      console.log(content)
-      return content
-    }
+      const lastIndex = this.size - 1
 
-    insert(element) {
-      content.push(element)
-      bubbleUp(content.length - 1)
-    }
-
-    extractMax() {
-      if (content.length <= 0) return null
-
-      const lastIndex = content.length - 1,
-        firstIndex = 0
-
-      if (firstIndex !== lastIndex) swap(firstIndex, lastIndex)
-
-      const result = content.pop()
-
-      if (content.length > 0) {
-        sinkDown(0)
-      }
-
-      return result
-    }
-
-    remove(element) {
-      for (let i = 0; i < this.size; i++) {
-        if (content[i] !== element) continue
-
-        const lastIndex = this.size - 1
-
-        if (i === lastIndex) {
-          content.pop()
-          break
-        }
-
-        swap(i, lastIndex)
-        content.pop()
-        bubbleUp(i)
-        sinkDown(i)
+      if (i === lastIndex) {
+        this.#content.pop()
         break
       }
+
+      this._swap(i, lastIndex)
+      this.#content.pop()
+      this._bubbleUp(i)
+      this._sinkDown(i)
+      break
     }
   }
-  return MaxBinaryHeap
-})()
+}
 
 module.exports = MaxBinaryHeap

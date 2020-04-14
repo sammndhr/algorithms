@@ -1,8 +1,7 @@
 const { BFS, DFSIterative } = require('./BinaryTreeTraversal')
 
 const BinarySearchTree = (() => {
-  let root
-  const findMinNode = node => {
+  const findMinNode = (node) => {
     if (node.left === null) return node
     else return findMinNode(node.left)
   }
@@ -16,12 +15,13 @@ const BinarySearchTree = (() => {
   }
 
   class BinarySearchTree {
+    #root
     constructor() {
-      root = null
+      this.#root = null
     }
 
     get root() {
-      return root
+      return this.#root
     }
 
     insert(val) {
@@ -37,8 +37,8 @@ const BinarySearchTree = (() => {
 
       const newNode = new TreeNode(val)
 
-      if (root === null) root = newNode
-      else recursiveInsertNode(root, newNode)
+      if (this.#root === null) this.#root = newNode
+      else recursiveInsertNode(this.#root, newNode)
     }
 
     remove(val) {
@@ -80,7 +80,7 @@ const BinarySearchTree = (() => {
           return node
         }
       }
-      root = removeNode(root, val)
+      this.#root = removeNode(this.#root, val)
     }
 
     // searches tree for specified val and returns the node if found, null otherwise
@@ -91,36 +91,35 @@ const BinarySearchTree = (() => {
         if (val > node.val) return recursiveSearch(node.right, val)
         if (val === node.val) return node
       }
-      return recursiveSearch(root, val)
+      return recursiveSearch(this.#root, val)
     }
 
     // tree traversals
     // returns array of vals
     printInOrder() {
-      const res = DFSIterative.inOrder(root)
+      const res = DFSIterative.inOrder(this.#root)
       console.log(res)
       return res
     }
 
     printPreOrder() {
-      const res = DFSIterative.preOrder(root)
+      const res = DFSIterative.preOrder(this.#root)
       console.log(res)
       return res
     }
 
     printPostOrder() {
-      const res = DFSIterative.postOrder(root)
+      const res = DFSIterative.postOrder(this.#root)
       console.log(res)
       return res
     }
 
     printLevelOrder() {
-      const res = BFS(root)
+      const res = BFS(this.#root)
       console.log(res)
       return res
     }
   }
   return BinarySearchTree
 })()
-
 module.exports = BinarySearchTree

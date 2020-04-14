@@ -1,6 +1,4 @@
 const Queue = (function () {
-  let first, last //Look in ./LinkedList.js to see other ways of declaring private static fields https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Private_fields
-
   class QueueNode {
     constructor(data, next = null) {
       this.data = data
@@ -9,41 +7,44 @@ const Queue = (function () {
   }
 
   class Queue {
+    #first
+    #last
+    //Look in ./LinkedList.js to see other ways of declaring private static fields https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/Class_fields#Private_fields
     constructor() {
-      first = null
-      last = null
+      this.#first = null
+      this.#last = null
     }
 
     enqueue(item) {
       const node = new QueueNode(item)
-      if (last) {
-        last.next = node
+      if (this.#last) {
+        this.#last.next = node
       }
-      last = node
+      this.#last = node
 
-      if (!first) first = last
+      if (!this.#first) this.#first = this.#last
     }
 
     dequeue() {
-      if (!first) return null
-      const data = first.data
-      first = first.next
-      if (!first) last = null
+      if (!this.#first) return null
+      const data = this.#first.data
+      this.#first = this.#first.next
+      if (!this.#first) this.#last = null
       return data
     }
 
     peek() {
-      if (!first) return null
-      return first.data
+      if (!this.#first) return null
+      return this.#first.data
     }
 
     isEmpty() {
-      return first === null
+      return this.#first === null
     }
 
     printQueue() {
       const result = []
-      let curr = first
+      let curr = this.#first
 
       while (curr) {
         result.push(curr.data)

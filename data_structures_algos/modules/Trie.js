@@ -28,11 +28,18 @@ const trie =
 
 // We'll assume that the words provided will consist of letters only and are always lowercase
 
-const Trie = (() => {
-  let root
+const Trie = class Trie {
+  #root
+  constructor() {
+    this.#root = {}
+  }
 
-  const traverse = word => {
-    let curr = root
+  get root() {
+    return this.#root
+  }
+  // helper. Change to private when private instance methods are supported
+  _traverse(word) {
+    let curr = this.#root
     for (const ch of word) {
       if (!curr) return null
       curr = curr[ch]
@@ -40,35 +47,24 @@ const Trie = (() => {
     return curr
   }
 
-  class Trie {
-    constructor() {
-      root = {}
+  insert(word) {
+    let curr = this.#root
+    for (const ch of word) {
+      curr[ch] = curr[ch] ? curr[ch] : {}
+      curr = curr[ch]
     }
 
-    get root() {
-      return root
-    }
-
-    insert(word) {
-      let curr = root
-      for (const ch of word) {
-        curr[ch] = curr[ch] ? curr[ch] : {}
-        curr = curr[ch]
-      }
-
-      curr.isWord = true
-    }
-
-    search(word) {
-      let node = traverse(word)
-      return node !== null && node.isWord === true
-    }
-
-    startsWith(word) {
-      return traverse(word) !== null
-    }
+    curr.isWord = true
   }
-  return Trie
-})()
+
+  search(word) {
+    let node = this._traverse(word)
+    return node !== null && node.isWord === true
+  }
+
+  startsWith(word) {
+    return this._traverse(word) !== null
+  }
+}
 
 module.exports = Trie
