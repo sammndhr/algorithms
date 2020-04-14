@@ -1,6 +1,6 @@
 // recursion, linked-list, two-pointer
 
-const { LinkedList } = require('../../data_structures/modules')
+const { LinkedList } = require('../../utils')
 
 // Recursive solutions
 
@@ -107,25 +107,25 @@ function test(cb) {
   const testCases = [
     [ll, 3, 5],
     [ll2, 3, 2],
-    [ll2, 5, null]
+    [ll2, 5, null],
   ]
   cb(testCases)
 }
 
-test(testCases => {
+test((testCases) => {
   for (const test of testCases) {
     printKthToLast(test[0].head, test[1])
   }
 })
 
-test(testCases => {
+test((testCases) => {
   for (const test of testCases) {
     const res = kthToLast(test[0].head, test[1])
     res ? console.log(res.val === test[2]) : console.log(res === test[2])
   }
 })
 
-test(testCases => {
+test((testCases) => {
   for (const test of testCases) {
     const res = kthToLastIterative(test[0].head, test[1])
     res ? console.log(res.val === test[2]) : console.log(res === test[2])

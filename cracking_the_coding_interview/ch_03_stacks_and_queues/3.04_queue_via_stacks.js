@@ -1,6 +1,6 @@
-const { Stack } = require('../../data_structures/modules')
+const { Stack } = require('../../utils')
 
-const MyQueue = (function() {
+const MyQueue = (function () {
   let stackNewest, stackOldest
   const shiftStacks = () => {
     if (stackOldest.isEmpty()) {

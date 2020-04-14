@@ -1,7 +1,6 @@
 //linked-list
 
-const { LinkedList } = require('../../data_structures/modules')
-const { printList } = require('../../utils')
+const { LinkedList, printList } = require('../../utils')
 
 /* 
 First intuition:
@@ -86,18 +85,18 @@ function test(cb) {
 
   const testCases = [
     [ll2, 4],
-    [ll, 5]
+    [ll, 5],
   ]
   cb(testCases)
 }
 
-test(testCases => {
+test((testCases) => {
   for (const test of testCases) {
     printList(partition(test[0].head, test[1]))
   }
 })
 
-test(testCases => {
+test((testCases) => {
   for (const test of testCases) {
     printList(partition2(test[0].head, test[1]))
   }

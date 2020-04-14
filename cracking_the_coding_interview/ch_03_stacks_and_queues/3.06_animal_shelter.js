@@ -1,4 +1,4 @@
-const { LinkedList } = require('../../data_structures/modules')
+const { LinkedList } = require('../../utils')
 
 const Animal = (() => {
   let order

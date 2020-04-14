@@ -1,6 +1,6 @@
-const { Stack } = require('../../data_structures/modules')
+const { Stack } = require('../../utils')
 
-const StackWithMin = (function() {
+const StackWithMin = (function () {
   let minStack = new Stack()
 
   class StackWithMin extends Stack {

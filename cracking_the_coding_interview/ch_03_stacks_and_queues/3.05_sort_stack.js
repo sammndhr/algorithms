@@ -1,5 +1,4 @@
-const { Stack } = require('../../data_structures/modules')
-const { getRandomInt } = require('../../utils')
+const { Stack, getRandomInt } = require('../../utils')
 
 function sortStack(stack) {
   let curr

@@ -1,5 +1,5 @@
 // linked-list
-const { LinkedList } = require('../../data_structures/modules')
+const { LinkedList } = require('../../utils')
 
 function removeDups(head) {
   const set = new Set()
@@ -58,13 +58,13 @@ function test(cb) {
 
   const testCases = [
     [ll, [1, 2, 3, 5]],
-    [ll2, [1, 2]]
+    [ll2, [1, 2]],
   ]
 
   cb(testCases)
 }
 
-test(testCases => {
+test((testCases) => {
   console.log('removeDups')
   for (const c of testCases) {
     const before = c[0].printList()
@@ -74,7 +74,7 @@ test(testCases => {
   }
 })
 
-test(testCases => {
+test((testCases) => {
   console.log('removeDupsNoBuffer')
   for (const c of testCases) {
     const before = c[0].printList()

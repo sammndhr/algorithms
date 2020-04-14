@@ -1,5 +1,5 @@
 // linked-list, two-pointer
-const { LinkedList } = require('../../data_structures/modules')
+const { LinkedList } = require('../../utils')
 
 /* 
 1. Two linked lists are intersecting if they merge at some node. 

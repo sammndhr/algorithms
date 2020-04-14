@@ -1,4 +1,4 @@
-const { LinkedList } = require('../../data_structures/modules')
+const { LinkedList } = require('../../utils')
 
 /**
  * Definition for singly-linked list.
@@ -12,7 +12,7 @@ const { LinkedList } = require('../../data_structures/modules')
  * @return {ListNode}
  */
 
-var deleteDuplicates = function(head) {
+var deleteDuplicates = function (head) {
   let curr = head
 
   while (curr != null && curr.next != null) {

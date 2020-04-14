@@ -10,7 +10,7 @@ Because you don't have access to the prev node,
 copy over the data of the next node and delete that node. 
 
 */
-const { LinkedList } = require('../../data_structures/modules')
+const { LinkedList } = require('../../utils')
 
 function deleteMiddleNode(node) {
   if (!node || !node.next) return false
@@ -43,7 +43,7 @@ ll3.fromArray([1, 2])
 const testCases = [
   [ll, ll.head.next.next, [1, 2, 4, 5]],
   [ll2, ll2.head.next, [1, 3]],
-  [ll3, ll3.head.next, false]
+  [ll3, ll3.head.next, false],
 ]
 
 for (const test of testCases) {

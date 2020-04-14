@@ -1,6 +1,5 @@
 // linked-list, recursion
-const { ListNode, compareObjects, LLToArr } = require('../../utils')
-const { LinkedList } = require('../../data_structures/modules')
+const { LinkedList, ListNode, compareObjects, LLToArr } = require('../../utils')
 
 // Using LinkedList
 function sumLists(ll1, ll2) {
@@ -131,7 +130,7 @@ function testSumLists() {
     [7, 1, 6],
     [5, 9, 2],
     [9, 1, 3],
-    [8, 2]
+    [8, 2],
   ]
 
   for (let i = 0; i < 4; i++) {
@@ -142,7 +141,7 @@ function testSumLists() {
 
   const testCases = [
     [lists[0], lists[1], [2, 1, 9]],
-    [lists[2], lists[3], [7, 4, 3]]
+    [lists[2], lists[3], [7, 4, 3]],
   ]
   console.log('Sum Lists')
   for (const test of testCases) {
@@ -157,7 +156,7 @@ function testSumListsForward() {
     [6, 1, 7],
     [2, 9, 5],
     [9, 1, 3],
-    [9, 2]
+    [9, 2],
   ]
 
   for (let i = 0; i < 4; i++) {
@@ -168,7 +167,7 @@ function testSumListsForward() {
 
   const testCases = [
     [lists[0], lists[1], [9, 1, 2]],
-    [lists[2], lists[3], [1, 0, 0, 5]]
+    [lists[2], lists[3], [1, 0, 0, 5]],
   ]
   console.log('Sum Lists Forward')
   for (const test of testCases) {

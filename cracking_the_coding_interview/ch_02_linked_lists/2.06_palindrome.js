@@ -1,6 +1,5 @@
 // linked-list, two-pointer, recursion
-const { LinkedList } = require('../../data_structures/modules')
-const { ListNode } = require('../../utils')
+const { LinkedList, ListNode } = require('../../utils')
 
 /* 
  #1: Reverse and Compare
@@ -209,26 +208,26 @@ function test(cb) {
     [ll2, true],
     [ll3, false],
     [ll4, true],
-    [ll5, true]
+    [ll5, true],
   ]
   cb(testCases)
 }
 
-test(testCases => {
+test((testCases) => {
   console.log('isPalindromeReverse')
   for (const test of testCases) {
     console.log(isPalindromeReverse(test[0].head) === test[1])
   }
 })
 
-test(testCases => {
+test((testCases) => {
   console.log('isPalindrome')
   for (const test of testCases) {
     console.log(isPalindrome(test[0].head) === test[1])
   }
 })
 
-test(testCases => {
+test((testCases) => {
   console.log('isPalindromeRecurse')
   for (const test of testCases) {
     console.log(isPalindromeRecurse(test[0].head) === test[1])

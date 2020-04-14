@@ -1,5 +1,5 @@
 // linked-list, two-pointer
-const { LinkedList } = require('../../data_structures/modules')
+const { LinkedList } = require('../../utils')
 
 /* 
 Floyd's Cycle Detection
