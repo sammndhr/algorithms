@@ -36,8 +36,8 @@ const DFSIterative = (start, graph, callback) => {
   visited.add(start)
 
   while (!stack.isEmpty()) {
-    const curr = stack.pop()
-    edges = graph.getVertexEdges(curr)
+    const curr = stack.pop(),
+      edges = graph.getVertexEdges(curr)
 
     callback(curr)
 

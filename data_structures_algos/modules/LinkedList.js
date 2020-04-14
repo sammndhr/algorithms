@@ -1,6 +1,6 @@
-const LinkedList = (function() {
-  const head = Symbol('head') //To keep head as private in linked list
-  const size = Symbol('size')
+const LinkedList = (function () {
+  // const head = Symbol('head') //To keep head as private in linked list
+  // const size = Symbol('size')
 
   class ListNode {
     constructor(val, next = null) {
@@ -11,24 +11,24 @@ const LinkedList = (function() {
 
   class LinkedList {
     // Private static fields
-    // #head
-    // #size
+    #head
+    #size
 
     constructor() {
-      // The head and size property shouldn't be modifiable outside the class. So there should only be a getter. Class fields aren't supported by a lot of browsers. Use symbol instead to create private class variables.
-      // this.#head = null
-      // this.#size = 0
-      this[head] = null
-      this[size] = 0
+      // The head and size property shouldn't be modifiable outside the class. So there should only be a getter. Class fields aren't supported by a lot of browsers. Use symbol instead to create private class variables if you're not using babel.
+      this.#head = null
+      this.#size = 0
+      // this[head] = null
+      // this[size] = 0
     }
 
     //getters
     get head() {
-      return this[head]
+      return this.#head
     }
 
     get size() {
-      return this[size]
+      return this.#size
     }
 
     fromArray(array) {
@@ -41,51 +41,51 @@ const LinkedList = (function() {
     prependToHead(val) {
       const node = new ListNode(val)
 
-      if (this[head] == null) this[head] = node
+      if (this.#head == null) this.#head = node
       else {
-        const prevHead = this[head]
-        this[head] = node
-        this[head].next = prevHead
+        const prevHead = this.#head
+        this.#head = node
+        this.#head.next = prevHead
       }
 
-      this[size]++
+      this.#size++
     }
 
     // T — O(n)
     appendToTail(val) {
       const node = new ListNode(val)
 
-      if (this[head] == null) this[head] = node
+      if (this.#head == null) this.#head = node
       else {
-        let curr = this[head]
+        let curr = this.#head
         while (curr.next) {
           curr = curr.next
         }
         curr.next = node
       }
 
-      this[size]++
+      this.#size++
     }
 
     // T — O(1)
     deleteFromHead() {
-      const currHead = this[head]
+      const currHead = this.#head
       if (!currHead) return null
 
-      this[head] = currHead.next
-      this[size]--
+      this.#head = currHead.next
+      this.#size--
       return currHead.val
     }
 
     // T — O(n)
     deleteFromTail() {
-      let curr = this[head]
+      let curr = this.#head
 
       if (!curr) return null
 
       //Handle case of single node in linked list
       if (!curr.next) {
-        this[head] = null
+        this.#head = null
         return curr.val
       }
 
@@ -98,7 +98,7 @@ const LinkedList = (function() {
 
       prev.next = null
 
-      this[size]--
+      this.#size--
       return curr.val
     }
 
@@ -106,7 +106,7 @@ const LinkedList = (function() {
     deleteNode(val, deleteMultiple = false) {
       let deleteCount = 0
 
-      let curr = this[head],
+      let curr = this.#head,
         prev = null
 
       while (curr) {
@@ -116,14 +116,14 @@ const LinkedList = (function() {
             // const temp = curr
             curr = curr.next
             // temp.next = null
-            this[head] = curr
+            this.#head = curr
           } else {
             prev.next = curr.next
             // curr.next = null
             curr = prev.next
           }
 
-          this[size]--
+          this.#size--
           deleteCount++
 
           if (!deleteMultiple) return true
@@ -137,7 +137,7 @@ const LinkedList = (function() {
     }
 
     search(val) {
-      let curr = this[head]
+      let curr = this.#head
 
       while (curr) {
         if (curr.val === val) return true
@@ -149,7 +149,7 @@ const LinkedList = (function() {
 
     printList() {
       const result = []
-      let curr = this[head]
+      let curr = this.#head
 
       while (curr) {
         result.push(curr.val)
@@ -160,7 +160,7 @@ const LinkedList = (function() {
     }
 
     getTail() {
-      let curr = this[head]
+      let curr = this.#head
       if (!curr) return null
       while (curr.next) {
         curr = curr.next

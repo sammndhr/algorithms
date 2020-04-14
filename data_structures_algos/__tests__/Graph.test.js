@@ -45,7 +45,7 @@ describe('scoped graph', () => {
 
 describe('addVertex', () => {
   test('adds vertex to graph with specified value', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     const res = { 1: [] }
     expect(g.printGraph()).toEqual(res)
@@ -63,7 +63,7 @@ describe('addVertex', () => {
 
 describe('addEdge', () => {
   test('adds edge to vertex if the edge does not already exist', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     g.addVertex(2)
     g.addEdge(1, 2)
@@ -72,7 +72,7 @@ describe('addEdge', () => {
   })
 
   test('throws error if vertex does not exist in graph', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
 
     expect(() => {
@@ -81,7 +81,7 @@ describe('addEdge', () => {
   })
 
   test('throws error if edge does not exist in graph', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
 
     expect(() => {
@@ -90,7 +90,7 @@ describe('addEdge', () => {
   })
 
   test('throws error if vertex already has the specified edge', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     g.addVertex(2)
     g.addEdge(1, 2)
@@ -103,7 +103,7 @@ describe('addEdge', () => {
 
 describe('getVertexEdges', () => {
   test('returns array of edges if vertex exists in graph', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     g.addVertex(2)
     g.addVertex(3)
@@ -115,7 +115,7 @@ describe('getVertexEdges', () => {
   })
 
   test('throws error if vertex does not exist in graph', () => {
-    g = new Graph()
+    const g = new Graph()
 
     expect(() => {
       g.getVertexEdges(1)
@@ -125,7 +125,7 @@ describe('getVertexEdges', () => {
 
 describe('hasEdge', () => {
   test('returns true if vertex has specified edge', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     g.addVertex(2)
     g.addEdge(1, 2)
@@ -134,7 +134,7 @@ describe('hasEdge', () => {
   })
 
   test('returns false if vertex does not have specified edge', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     g.addVertex(2)
     g.addEdge(1, 2)
@@ -143,7 +143,7 @@ describe('hasEdge', () => {
   })
 
   test('returns false if vertex does not exist in graph', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     g.addVertex(2)
     g.addEdge(1, 2)
@@ -154,13 +154,13 @@ describe('hasEdge', () => {
 
 describe('hasVertex', () => {
   test('returns true if vertex exists in graph', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
 
     expect(g.hasVertex(1)).toBe(true)
   })
   test('returns false if vertex does not exist in graph', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
 
     expect(g.hasVertex(2)).toBe(false)
@@ -169,7 +169,7 @@ describe('hasVertex', () => {
 
 describe('removeEdge', () => {
   test('successfully removes edge from vertex.', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     g.addVertex(2)
     g.addEdge(1, 2)
@@ -182,7 +182,7 @@ describe('removeEdge', () => {
     expect(g.printGraph()).toEqual(res)
   })
   test('throws error if vertex does not exist in graph', () => {
-    g = new Graph()
+    const g = new Graph()
 
     expect(() => {
       g.removeEdge(1, 2)
@@ -192,7 +192,7 @@ describe('removeEdge', () => {
 
 describe('removeVertex', () => {
   test('successfully removes vertex from graph.', () => {
-    g = new Graph()
+    const g = new Graph()
     g.addVertex(1)
     g.addVertex(2)
 
@@ -202,7 +202,7 @@ describe('removeVertex', () => {
   })
 
   test('throws error if vertex does not exist in graph', () => {
-    g = new Graph()
+    const g = new Graph()
 
     expect(() => {
       g.removeVertex(1)
