@@ -2,6 +2,8 @@
   "name": "data_structures_and_algorithms",
   "version": "1.0.0",
   "description": "Everything related to data structures and algorithms that I've coded.",
+  "main": "./data_structures/modules/index.js",
+  "module": "./data_structures/modules/index.js",
   "scripts": {
     "test": "jest"
   },
