@@ -1,11 +1,12 @@
-# Data Structures And Algorithms
+# Algorithms
 
-Everything related to data structures and algorithms that I've coded.
+Everything related to algorithms, toy problems.
+Find Data Structures here--> https://github.com/mrinalini-m/data_structures
 
 **Usage**
 
 1. Clone repo
-1. run `npm install` or `yarn` (to run tests for data_structures). Skip if not testing data_structures.
+1. run `npm install` or `yarn`.
 1. To test individual problems: Eg, run `node leetcode/array_string/0001_two_sum.js`.
 
 > Note: Install [node.js](https://nodejs.org/en/)
@@ -49,17 +50,6 @@ The resulting file will be `1.09_string_rotation.js`. Omitting the optional chap
 6. [x] Animal Shelter
 
 ### Chapter 4 — Trees and Graphs
-
-## Implementing Data Structures
-
-1. [x] Hash Table
-2. [x] Linked List
-3. [x] Stack
-4. [x] Queue
-5. [x] Binary Search Tree
-6. [x] Tree Traversal (DFS, BFS)
-7. [x] Trie
-8. [x] Binary Heap (Min, Max)
 
 ## Leetcode
 

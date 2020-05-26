@@ -1,4 +1,4 @@
-# to-studies and todos
+# Data Structures and Algorithms to-studies and to-dos
 
 1. [ ] Tail-end recursion
 2. [x] Heap (min, max) Data structure
