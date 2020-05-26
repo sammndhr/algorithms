@@ -5,8 +5,8 @@ Find Data Structures here--> https://github.com/mrinalini-m/data_structures
 
 **Usage**
 
-1. Clone repo
-1. run `npm install` or `yarn`.
+1. Clone repo `git clone https://github.com/mrinalini-m/algorithms.git`
+1. Run `npm install` or `yarn`.
 1. To test individual problems: Eg, run `node leetcode/array_string/0001_two_sum.js`.
 
 > Note: Install [node.js](https://nodejs.org/en/)
