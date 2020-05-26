@@ -1,6 +1,6 @@
 const { arrToBinaryTree } = require('../../utils')
 
-function validate8st(root) {
+function validateBST(root) {
   const recurse = (n, min, max) => {
     if (!n) return true
 
@@ -29,9 +29,9 @@ const testCases = [
   [3, 5, 1, 0, 2, 4, 6], //false
   [3, 1, 5, 0, 2, null, null, 0], //false
   [0, 1, 2, 3, 4], //true
-  [3, 3, 5, 1, null, 4, 6, 0, 2], //false
+  [3, 3, 5, 1, null, 4, 6, 0, 2] //false
 ]
 
 for (const test of testCases) {
-  console.log(validate8st(arrToBinaryTree(test))) //true
+  console.log(validateBST(arrToBinaryTree(test))) //true
 }
