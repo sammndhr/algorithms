@@ -37,8 +37,8 @@ function rotateMatrixInPlace(matrix) {
     edge = n - 1
   if (n === 0 || n !== matrix[0].length) return false
 
-  function rotatePixels(row, col) {
-    let toRow, toCol, toPixel
+  function rotateCell(row, col) {
+    let toRow, toCol, toCell
     // Start at matrix[row][col]
     let fromRow = row,
       fromCol = col,
@@ -51,19 +51,19 @@ function rotateMatrixInPlace(matrix) {
       // edge - row becomes new column value
       toCol = edge - fromRow
 
-      toPixel = matrix[toRow][toCol]
+      toCell = matrix[toRow][toCol]
       matrix[toRow][toCol] = fromPixel
 
       //After transformation, the displaced pixel will need to be transformed. So it becomes the new 'from'
       fromRow = toRow
       fromCol = toCol
-      fromPixel = toPixel
+      fromPixel = toCell
     }
   }
 
   for (let row = 0; row < n / 2; row++) {
     for (let col = row; col < edge - row; col++) {
-      rotatePixels(row, col)
+      rotateCell(row, col)
     }
   }
 
