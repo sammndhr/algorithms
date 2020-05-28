@@ -17,7 +17,8 @@ n = string.length
 Space complexity - O(c) where c is 128
 Time complexity - O(n)
 
-You could express the complexity as O(c) space and O(min(c, n)) or O(c) time, where c is the size of the character set. 
+You could express the complexity as O(c) space and O(min(c, n)) or O(c) time,
+where c is the size of the character set. 
 */
 
 /* ---------------------------------------------------------------------------- */
@@ -37,7 +38,7 @@ function isUniqueConstantSpace(string) {
 /* 
 Space complexity - O(1). Constants only (i, j, len)
 
-Time complexity - O(n!) or O(min(c, n!)). I think n^2 isn't corrent. Because you're only checking n - i chars for each char. i.e. (n - 1) + (n - 2) + ... + 1
+Time complexity - O(n^2)
 */
 
 //tests

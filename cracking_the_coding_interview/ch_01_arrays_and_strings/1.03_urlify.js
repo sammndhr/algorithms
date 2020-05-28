@@ -24,7 +24,7 @@ function URLifyConstantSpace(string, trueLength) {
     if (string[i] === ' ') spaceCount++
   }
 
-  let index = trueLength + spaceCount * 2
+  let index = trueLength + spaceCount * 2 //string.length works too
 
   for (let i = trueLength - 1; i >= 0; i--) {
     if (string[i] === ' ') {

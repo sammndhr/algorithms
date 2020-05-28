@@ -13,19 +13,7 @@ function oneEditReplace(str1, str2, len) {
 function oneEditInsert(str1, str2, len1) {
   let inserted = false,
     string1 = str1.slice()
-  // i = 0,
-  // j = 0
 
-  // while (i < len1 && j < len1 + 1) {
-  //   if (str1[i] !== str2[j]) {
-  //     if (inserted) return false
-  //     j++
-  //     inserted = true
-  //   } else {
-  //     i++
-  //     j++
-  //   }
-  // }
   for (let i = 0; i < len1; i++) {
     if (string1[i] !== str2[i]) {
       if (inserted) return false
