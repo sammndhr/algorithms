@@ -10,4 +10,10 @@ function getRandomInt(min = 0, max = 100) {
   return Math.floor(Math.random() * (max - min)) + min //The maximum is exclusive and the minimum is inclusive
 }
 
-module.exports = { compareObjects, getRandomInt }
+function swapArrInPlace(array, i, j) {
+  let temp = array[i]
+  array[i] = array[j]
+  array[j] = temp
+}
+
+module.exports = { compareObjects, getRandomInt, swapArrInPlace }
