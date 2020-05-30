@@ -1,0 +1,317 @@
+{
+  "1": {
+    "title": "Array and string manipulation",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/merging-ranges?course=fc1&section=array-and-string-manipulation",
+        "title": "Merging Meeting Times",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/reverse-string-in-place?course=fc1&section=array-and-string-manipulation",
+        "title": "Reverse String in Place",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/reverse-words?course=fc1&section=array-and-string-manipulation",
+        "title": "Reverse Words",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/merge-sorted-arrays?course=fc1&section=array-and-string-manipulation",
+        "title": "Merge Sorted Arrays",
+        "number": 4
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/cafe-order-checker?course=fc1&section=array-and-string-manipulation",
+        "title": "Cafe Order Checker",
+        "number": 5
+      }
+    ]
+  },
+  "2": {
+    "title": "Hashing and hash tables",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/inflight-entertainment?course=fc1&section=hashing-and-hash-tables",
+        "title": "Inflight Entertainment",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/permutation-palindrome?course=fc1&section=hashing-and-hash-tables",
+        "title": "Permutation Palindrome",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/word-cloud?course=fc1&section=hashing-and-hash-tables",
+        "title": "Word Cloud Data",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/top-scores?course=fc1&section=hashing-and-hash-tables",
+        "title": "Top Scores",
+        "number": 4
+      }
+    ]
+  },
+  "3": {
+    "title": "Greedy algorithms",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/stock-price?course=fc1&section=greedy",
+        "title": "Apple Stocks",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/highest-product-of-3?course=fc1&section=greedy",
+        "title": "Highest Product of 3",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/product-of-other-numbers?course=fc1&section=greedy",
+        "title": "Product of All Other Numbers",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/cafe-order-checker?course=fc1&section=greedy",
+        "title": "Cafe Order Checker",
+        "number": 4
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/shuffle?course=fc1&section=greedy",
+        "title": "In-Place Shuffle",
+        "number": 5
+      }
+    ]
+  },
+  "4": {
+    "title": "Sorting, searching, and logarithms",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/find-rotation-point?course=fc1&section=sorting-searching-logarithms",
+        "title": "Find Rotation Point",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/find-duplicate-optimize-for-space?course=fc1&section=sorting-searching-logarithms",
+        "title": "Find Repeat, Space Edition",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/top-scores?course=fc1&section=sorting-searching-logarithms",
+        "title": "Top Scores",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/merging-ranges?course=fc1&section=sorting-searching-logarithms",
+        "title": "Merging Meeting Times",
+        "number": 4
+      }
+    ]
+  },
+  "5": {
+    "title": "Trees and graphs",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/balanced-binary-tree?course=fc1&section=trees-graphs",
+        "title": "Balanced Binary Tree",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/bst-checker?course=fc1&section=trees-graphs",
+        "title": "Binary Search Tree Checker",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/second-largest-item-in-bst?course=fc1&section=trees-graphs",
+        "title": "2nd Largest Item in a Binary Search Tree",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/graph-coloring?course=fc1&section=trees-graphs",
+        "title": "Graph Coloring",
+        "number": 4
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/mesh-message?course=fc1&section=trees-graphs",
+        "title": "MeshMessage",
+        "number": 5
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/find-duplicate-optimize-for-space-beast-mode?course=fc1&section=trees-graphs",
+        "title": "Find Repeat, Space Edition BEAST MODE",
+        "number": 6
+      }
+    ]
+  },
+  "6": {
+    "title": "Dynamic programming and recursion",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/recursive-string-permutations?course=fc1&section=dynamic-programming-recursion",
+        "title": "Recursive String Permutations",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/nth-fibonacci?course=fc1&section=dynamic-programming-recursion",
+        "title": "Compute the nth Fibonacci Number",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/coin?course=fc1&section=dynamic-programming-recursion",
+        "title": "Making Change",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/cake-thief?course=fc1&section=dynamic-programming-recursion",
+        "title": "The Cake Thief",
+        "number": 4
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/balanced-binary-tree?course=fc1&section=dynamic-programming-recursion",
+        "title": "Balanced Binary Tree",
+        "number": 5
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/bst-checker?course=fc1&section=dynamic-programming-recursion",
+        "title": "Binary Search Tree Checker",
+        "number": 6
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/second-largest-item-in-bst?course=fc1&section=dynamic-programming-recursion",
+        "title": "2nd Largest Item in a Binary Search Tree",
+        "number": 7
+      }
+    ]
+  },
+  "7": {
+    "title": "Queues and stacks",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/largest-stack?course=fc1&section=queues-stacks",
+        "title": "Largest Stack",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/queue-two-stacks?course=fc1&section=queues-stacks",
+        "title": "Implement A Queue With Two Stacks",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/matching-parens?course=fc1&section=queues-stacks",
+        "title": "Parenthesis Matching",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/bracket-validator?course=fc1&section=queues-stacks",
+        "title": "Bracket Validator",
+        "number": 4
+      }
+    ]
+  },
+  "8": {
+    "title": "Linked lists",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/delete-node?course=fc1&section=linked-lists",
+        "title": "Delete Node",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/linked-list-cycles?course=fc1&section=linked-lists",
+        "title": "Does This Linked List Have A Cycle?",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/reverse-linked-list?course=fc1&section=linked-lists",
+        "title": "Reverse A Linked List",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/kth-to-last-node-in-singly-linked-list?course=fc1&section=linked-lists",
+        "title": "Kth to Last Node in a Singly-Linked List",
+        "number": 4
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/find-duplicate-optimize-for-space-beast-mode?course=fc1&section=linked-lists",
+        "title": "Find Repeat, Space Edition BEAST MODE",
+        "number": 5
+      }
+    ]
+  },
+  "10": {
+    "title": "General programming",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/rectangular-love?course=fc1&section=general-programming",
+        "title": "Rectangular Love",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/temperature-tracker?course=fc1&section=general-programming",
+        "title": "Temperature Tracker",
+        "number": 2
+      }
+    ]
+  },
+  "11": {
+    "title": "Bit manipulation",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/find-unique-int-among-duplicates?course=fc1&section=bit-manipulation",
+        "title": "The Stolen Breakfast Drone",
+        "number": 1
+      }
+    ]
+  },
+  "12": {
+    "title": "Combinatorics, probability, and other math",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/which-appears-twice?course=fc1&section=combinatorics-probability-math",
+        "title": "Which Appears Twice",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/find-in-ordered-set?course=fc1&section=combinatorics-probability-math",
+        "title": "Find in Ordered Set",
+        "number": 2
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/shuffle?course=fc1&section=combinatorics-probability-math",
+        "title": "In-Place Shuffle",
+        "number": 3
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/simulate-5-sided-die?course=fc1&section=combinatorics-probability-math",
+        "title": "Simulate 5-sided die",
+        "number": 4
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/simulate-7-sided-die?course=fc1&section=combinatorics-probability-math",
+        "title": "Simulate 7-sided die",
+        "number": 5
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/two-egg-problem?course=fc1&section=combinatorics-probability-math",
+        "title": "Two Egg Problem",
+        "number": 6
+      }
+    ]
+  },
+  "13": {
+    "title": "JavaScript",
+    "problems": [
+      {
+        "link": "https://www.interviewcake.com/question/javascript/js-scope?course=fc1&section=javascript",
+        "title": "JavaScript Scope",
+        "number": 1
+      },
+      {
+        "link": "https://www.interviewcake.com/question/javascript/js-whats-wrong?course=fc1&section=javascript",
+        "title": "What's Wrong with This JavaScript?",
+        "number": 2
+      }
+    ]
+  }
+}
