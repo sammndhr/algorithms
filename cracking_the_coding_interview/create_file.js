@@ -7,11 +7,8 @@ const createFilename = (str, chap) => {
   return `${filename}${arr.join('_')}.js`
 }
 
-const createFunctionName = str => {
-  const words = str
-    .toLowerCase()
-    .split(' ')
-    .slice(1)
+const createFunctionName = (str) => {
+  const words = str.toLowerCase().split(' ').slice(1)
 
   let functionName = words.shift()
   for (const word of words) {
@@ -27,3 +24,10 @@ const functionName = createFunctionName(name)
 exec(
   `touch ${file} && code ${file} && node ./../write_file_contents.js ${functionName} > ${file}`
 )
+
+/* 
+**To create file**: From the chapter folder, run `ch_01_arrays_and_strings$ node ../create_file.js '9 String Rotation' 1`.
+
+The resulting file will be `1.09_string_rotation.js`. Omitting the optional chapter `1` at the end, will result in the filename `09_string_rotation.js`.
+
+*/

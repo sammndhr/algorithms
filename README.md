@@ -13,10 +13,6 @@ Find Data Structures here--> https://github.com/mrinalini-m/data_structures
 
 ## Cracking the Coding Interview
 
-**To create file**: From the chapter folder, run `ch_01_arrays_and_strings$ node ../create_file.js '9 String Rotation' 1`.
-
-The resulting file will be `1.09_string_rotation.js`. Omitting the optional chapter `1` at the end, will result in the filename `09_string_rotation.js`.
-
 ### Chapter 1 — Arrays and Strings
 
 1. [x] Is Unique
@@ -50,6 +46,37 @@ The resulting file will be `1.09_string_rotation.js`. Omitting the optional chap
 6. [x] Animal Shelter
 
 ### Chapter 4 — Trees and Graphs
+
+1. [x] Route Between Nodes
+2. [x] Minimal Tree
+3. [x] List of Depths
+4. [x] Check Balanced
+5. [x] Validate BST
+
+## Interview Cake
+
+### Chapter 1 - Array and string manipulation
+
+1. [x] Merging Meeting Times
+2. [x] Reverse String in Place
+3. [x] Reverse Words
+4. [x] Merge Sorted Arrays
+5. [x] Cafe Order Checker
+
+### Chapter 2 - Hashing and hash tables
+
+1. [x] Inflight Entertainment
+2. [x] Permutation Palindrome
+3. [x] Word Cloud Data
+4. [x] Top Scores
+
+### Chapter 3 - Greedy algorithms
+
+1. [x] Apple Stocks
+2. [x] Highest Product of 3
+3. [x] Product of All Other Numbers
+4. [x] Cafe Order Checker
+5. [x] In-Place Shuffle
 
 ## Leetcode
 
