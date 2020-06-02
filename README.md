@@ -3,11 +3,12 @@
 Everything related to algorithms, toy problems.
 Find Data Structures here--> https://github.com/mrinalini-m/data_structures
 
+You can can search problems by tags or by name in my blog--> https://blog.mrinalini.dev/
+
 **Usage**
 
 1. Clone repo `git clone https://github.com/mrinalini-m/algorithms.git`
-1. Run `npm install` or `yarn`.
-1. To test individual problems: Eg, run `node leetcode/array_string/0001_two_sum.js`.
+2. To test individual problems: Eg, run `node leetcode/array_string/0001_two_sum.js`.
 
 > Note: Install [node.js](https://nodejs.org/en/)
 
