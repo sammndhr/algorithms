@@ -15,12 +15,6 @@
     "url": "https://github.com/mrinalini-m/algorithms/issues"
   },
   "homepage": "https://github.com/mrinalini-m/algorithms#readme",
-  "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.5",
-    "babel-jest": "^25.3.0",
-    "jest": "^25.3.0"
-  },
   "dependencies": {
     "data_structures": "git+https://github.com/mrinalini-m/data_structures.git"
   }
