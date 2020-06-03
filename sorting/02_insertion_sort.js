@@ -85,6 +85,8 @@ function insertionSortRecursiveBubble(arr) {
   return
 }
 
+/* ---------------------------------------------------------------------------- */
+
 const testCases = [
   [
     [5, 4, 3, 2, 1],
