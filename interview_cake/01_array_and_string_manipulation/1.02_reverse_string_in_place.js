@@ -1,12 +1,12 @@
 // https://www.interviewcake.com/question/javascript/reverse-string-in-place?course=fc1&section=array-and-string-manipulation
 
-const { swapArrInPlace } = require('../../utils')
+const { swapArrItemsInPlace } = require('../../utils')
 // Reverse the input array of characters in place
 function reverse(arrayOfChars) {
   let i = 0,
     j = arrayOfChars.length - 1
   while (i < j) {
-    swapArrInPlace(arrayOfChars, i, j)
+    swapArrItemsInPlace(arrayOfChars, i, j)
     i++
     j--
   }

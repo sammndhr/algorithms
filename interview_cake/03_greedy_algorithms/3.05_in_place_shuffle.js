@@ -7,7 +7,7 @@ Keep doing this until there are no more items in the array.
 
 https://www.mathsisfun.com/data/probability-events-conditional.html
 */
-const { swapArrInPlace } = require('./../../utils')
+const { swapArrItemsInPlace } = require('./../../utils')
 
 function getRandom(floor, ceiling) {
   return Math.floor(Math.random() * (ceiling - floor + 1)) + floor
@@ -22,7 +22,7 @@ function shuffle(array) {
   for (let i = 0; i < len - 1; i++) {
     const randomIndex = getRandom(i, len - 1)
 
-    if (i !== randomIndex) swapArrInPlace(array, i, randomIndex)
+    if (i !== randomIndex) swapArrItemsInPlace(array, i, randomIndex)
   }
 }
 

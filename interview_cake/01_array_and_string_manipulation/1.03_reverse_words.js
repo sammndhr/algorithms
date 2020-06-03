@@ -1,13 +1,13 @@
 // https://www.interviewcake.com/question/javascript/reverse-words?course=fc1&section=array-and-string-manipulation
 
-const { swapArrInPlace } = require('../../utils')
+const { swapArrItemsInPlace } = require('../../utils')
 
 //Helper. Reverses characters in given range in array
 function reverseCharacters(arrayOfChars, leftIndex, rightIndex) {
   let i = leftIndex,
     j = rightIndex
   while (i < j) {
-    swapArrInPlace(arrayOfChars, i, j)
+    swapArrItemsInPlace(arrayOfChars, i, j)
     i++
     j--
   }
