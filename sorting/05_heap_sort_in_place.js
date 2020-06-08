@@ -14,14 +14,14 @@ function buildMaxHeap(arr) {
 /* 
 Time Complexity of building a max heap in place is O(n). This is because of the structure of a binary heap.
 
-| no. of nodes | Binary tree Level | height - level | work done to sink down node | % of tree nodes |
-| ------------ | ----------------- | -------------- | --------------------------- | --------------- |
-| 1            | 0                 | h              | 1 * h                       | ...             |
-| 2            | 1                 | h - 1          | 2 * h-1                     | ...             |
+| no. of nodes | Binary tree Level | height - level | work done to sink down nodes | % of tree nodes |
+| ------------ | ----------------- | -------------- | ---------------------------  | --------------- |
+| 1            | 0                 | h              | 1 * h                        | ...             |
+| 2            | 1                 | h - 1          | 2 * h-1                      | ...             |
 ...
-| 2^h-2        | h-2               | 2              | 2^h-2 * 2                   | 12.5%           |
-| 2^h-1        | h-1               | 1              | 2^h-1 * 1                   | 25%             |
-| 2^h          | h                 | 0              | 2^h * 0                     | 50%             |
+| 2^h-2        | h-2               | 2              | 2^h-2 * 2                    | 12.5%           |
+| 2^h-1        | h-1               | 1              | 2^h-1 * 1                    | 25%             |
+| 2^h          | h                 | 0              | 2^h * 0                      | 50%             |
 ------------------------------------------------------------------------------------------------------
                                                     T(n) = sum of this column
 

@@ -11,20 +11,19 @@ function quickSort(arr) {
 
     const pivot = arr[start]
     let smaller = start,
-      bigger
+      bigger = start + 1
 
-    for (bigger = start + 1; bigger <= end; bigger++) {
+    for (bigger; bigger <= end; bigger++) {
       if (arr[bigger] < pivot) {
         smaller++
         swapArrItemsInPlace(arr, smaller, bigger)
       }
     }
-    bigger--
 
     swapArrItemsInPlace(arr, start, smaller)
 
     recurse(start, smaller - 1)
-    recurse(smaller + 1, bigger)
+    recurse(smaller + 1, end)
   }
   recurse(0, arr.length - 1)
 }
