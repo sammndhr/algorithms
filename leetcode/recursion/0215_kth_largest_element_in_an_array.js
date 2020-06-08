@@ -58,19 +58,7 @@ For average case,consider that the pivot is always in middle. But since we're di
 
 n + n/2 + n/4 + ..... n/n ==> O(2n)
 
-Worst case: array will get partitioned 10% and 90%
-n + 0.9n + 0.9^2 * n + 0.9^3 * n + ...
-
-https://en.wikipedia.org/wiki/Geometric_series
-Sum = 1/(1-r)
-
-Therefore,
-n + 0.9n + 0.9^2 * n + 0.9^3 * n + ... = (1/(1-0.9))* n
-= (1/(0.1))* n
-= 10n
-so, T(n) = O(n)
-
-
+Worst case: O(n^2)
 */
 const arr = [3, 2, 1, 5, 6, 4]
 console.log(findKthLargest(arr, 2))
