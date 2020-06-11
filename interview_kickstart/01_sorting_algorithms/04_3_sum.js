@@ -57,7 +57,9 @@ Notes:
 
 /* 
 --------------------------------------------------------------------------------------------
-Slightly optmized version using hashmap (sets). Doesn't check already checked first values
+Slightly optmized version using hashmap (sets). Doesn't check already checked first values.
+Runs much slower than two pointer solution. Like 3 times as slow. Da fuq. y doe?
+
 Time Complexity - O(n^2)
 Space Complexity - O(n^2) from the 'seen' set. Same as possible number of triplets. 
 */
