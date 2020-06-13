@@ -1,6 +1,5 @@
-// Sam's code
 /* 
-  Using Binary Heap. Optimized heap
+  Using Binary Heap (Optimized)
 
   Time Complexity - O(nklog(k))
   - Heap size will be k. So Heapifying is O(log(k))
@@ -13,14 +12,10 @@ function mergeArrays(arrays) {
   const n = arrays[0].length,
     merged = [],
     increasingOrder = isIncreasingOrder(arrays)
-  //Create min or max heap based on order
+  // [0]
   const heap = increasingOrder ? new MinBinaryHeap() : new MaxBinaryHeap()
 
-  /*
-  - Insert first element of all arrays into heap.
-  - Each heap item will be an instance of HeapNode which will keep track of 
-    the arrIndex, elementIndex and value.
-  */
+  // [1]
   arrays.forEach((arr, i) => {
     heap.insert(new HeapNode(i, 0, arr[0]))
   })
@@ -28,10 +23,7 @@ function mergeArrays(arrays) {
   heap.heapify()
 
   if (increasingOrder) {
-    /*
-    - Keep getting heap top(min) and pushing it into the merged array.
-    - If the min value if Infinity, we've reached the end of all arrays
-    */
+    // [2]
     while (heap.top.value !== Infinity) {
       getAndInsertNextVal(arrays, heap, merged, Infinity, n)
     }
@@ -44,11 +36,22 @@ function mergeArrays(arrays) {
   return merged
 }
 
-// Helper functions
 /* 
-  - Function to get the top(min or max val), push top val into merged and insert next array value into heap
-  - instead of extracting and inserting, we're going to swap the new value with the top value. So we don't have to re-heapify
-    twice for extraction and insertion
+Notes: 
+[0] Create min or max heap based on order
+[1] - Insert first element of all arrays into heap.
+    - Each heap item will be an instance of HeapNode which will keep track of 
+      the arrIndex, elementIndex & value.
+[2] - Keep getting heap top(min) & pushing it into the merged array.
+    - If the min value if Infinity, we've reached the end of all arrays
+*/
+
+/* 
+ Helper functions
+  - Function to get the top(min or max val), push top val into merged
+    & insert next array value into heap
+  - instead of extracting & inserting, we're going to swap the new value with the top value.
+    So we don't have to re-heapify twice for extraction & insertion
   - We'll use the arrIndex, elementIndex from the heap top to get the next item to insert
   - If we're at the end of the array insert Infinity(min heap or increasing order) or -Infinity
 */
@@ -67,7 +70,7 @@ function getAndInsertNextVal(arrays, heap, merged, infinity, n) {
 /* 
  - Function to get the sort order of the arrays
  - Can't just check the first two values of the first array cause they might be repeated values
- - So keep checking until two values are different and return true or false
+ - So keep checking until two values are different & return true or false
 */
 function isIncreasingOrder(arrays) {
   let i = 0,
@@ -94,7 +97,7 @@ function swap(arr, i, j) {
   arr[j] = temp
 }
 
-// HeapNode will keep track of the array index, the element index and the value
+// HeapNode will keep track of the array index, the element index & the value
 class HeapNode {
   constructor(arrIndex, elementIndex, value) {
     this.arrIndex = arrIndex
@@ -103,6 +106,8 @@ class HeapNode {
   }
 }
 
+// Modified Binary Heaps
+// Unmodified Binary Heap implementation here --> https://blog.mrinalini.dev/posts/binary-heap/
 class BinaryHeap {
   constructor() {
     this.heapArr = []
@@ -130,12 +135,10 @@ class BinaryHeap {
       this.sinkDown(i)
     }
   }
-  // sinkDown will be different for max and min heap
+  // sinkDown will be different for max & min heap
   sinkDown(p) {}
 }
 
-// Modified Binary Heaps.
-// Unmodified Binary Heap implementation here --> https://blog.mrinalini.dev/posts/binary-heap/
 // Min Binary Heap for increasing sort order
 class MinBinaryHeap extends BinaryHeap {
   constructor() {
@@ -210,17 +213,18 @@ class MaxBinaryHeap extends BinaryHeap {
   }
 }
 
+// Tests
 let arr1 = [
   [5, 6, 8, 16],
   [3, 7, 12, 13],
   [1, 10, 11, 15],
-  [2, 4, 9, 14],
+  [2, 4, 9, 14]
 ]
 let arr2 = [
   [200, 50, 18, 1],
   [180, 45, 15, 9],
   [30, 17, 8, 5],
-  [190, 40, 12, 7],
+  [190, 40, 12, 7]
 ]
 console.log(mergeArrays(arr1))
 console.log(mergeArrays(arr2))

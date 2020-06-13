@@ -1,5 +1,5 @@
 function mergeSort(arr) {
-  // Merge function to merge sorted left and right halves or arrray
+  // Merge function to merge sorted left and right halves or array
   function merge(start, mid, end) {
     // Instantiate an empty auxillary array and set i = start, j = mid + 1
     const aux = []

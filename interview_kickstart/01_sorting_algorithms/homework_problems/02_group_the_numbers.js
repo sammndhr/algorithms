@@ -1,3 +1,5 @@
+// Given array of numbers, group them so that all evens are in left side and all odds are in right side
+
 /* 
 First Intuition: Use two pointers to partition the array like in quicksort
 

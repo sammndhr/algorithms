@@ -47,9 +47,9 @@ function merge_sort(arr) {
   for (let interval = 1; interval < len; interval *= 2) {
     for (let start = 0; start < len - interval; start += interval * 2) {
       const mid = Math.min(start + interval - 1, len - 1),
-        right = Math.min(start + 2 * interval - 1, len - 1)
+        end = Math.min(start + 2 * interval - 1, len - 1)
 
-      merge(start, mid, right)
+      merge(start, mid, end)
     }
   }
 
