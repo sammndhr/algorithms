@@ -1,6 +1,7 @@
-// Given a set of size n, count total number of distinct possible subsets? Assume n >= 0 and all elements of the set are unique.
+// Given a set of size n, count total number of distinct possible subsets. Assume n >= 0 and all elements of the set are unique. Note: The total number of possible subsets of a subset of size n is `2^n`.
 
 // Employing decrease-and-conquer strategy, so that each iteration or recursive call will be n, n-1, n-2, ..., 0
+
 /*
 Iterative
 Time Complexity - O(n)

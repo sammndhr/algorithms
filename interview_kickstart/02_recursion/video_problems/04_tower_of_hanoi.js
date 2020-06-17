@@ -50,18 +50,18 @@ class TowerOfHanoi {
   }
 
   /** Main recursive function to move all disks */
-  recurseAndMoveAlldisks(n, src, dst, aux) {
+  recurseAndMoveAllDisks(n, src, dst, aux) {
     this.moveCount++
-    if (n === 1) this.moveOnedisk(src, dst)
+    if (n === 1) this.moveOneDisk(src, dst)
     else {
-      this.recurseAndMoveAlldisks(n - 1, src, aux, dst)
-      this.moveOnedisk(src, dst)
-      this.recurseAndMoveAlldisks(n - 1, aux, dst, src)
+      this.recurseAndMoveAllDisks(n - 1, src, aux, dst)
+      this.moveOneDisk(src, dst)
+      this.recurseAndMoveAllDisks(n - 1, aux, dst, src)
     }
   }
 
   /** Pop one disk from src, push popped disk into dst and print rods */
-  moveOnedisk(src, dst) {
+  moveOneDisk(src, dst) {
     const disk = this.rods[src].pop()
     this.rods[dst].push(disk)
 
@@ -69,7 +69,7 @@ class TowerOfHanoi {
     this.printRods()
   }
 
-  /** Function to start puzzle — init rods, print initial state, call recurseAndMoveAlldisks & print moveCount. Call after creating an instance of TowerOfHanoi */
+  /** Function to start puzzle — init rods, print initial state, call recurseAndMoveAllDisks & print moveCount. Call after creating an instance of TowerOfHanoi */
   init() {
     this.initRods()
 
@@ -81,7 +81,7 @@ class TowerOfHanoi {
     console.log(`Total moves: ${this.moveCount}`)
     this.printDivider()
 
-    this.recurseAndMoveAlldisks(this.diskCount, this.src, this.dst, this.aux)
+    this.recurseAndMoveAllDisks(this.diskCount, this.src, this.dst, this.aux)
     this.printDivider()
     console.log(`Total moves: 2^${this.diskCount} - 1 = ${this.moveCount}`)
     this.printDivider()
