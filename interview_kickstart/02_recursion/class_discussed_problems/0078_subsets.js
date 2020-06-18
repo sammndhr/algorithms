@@ -10,7 +10,6 @@ function subsets(nums) {
   const result = []
 
   function subsetHelper(slate, array) {
-    console.log(slate)
     if (array.length === 0) result.push(slate)
     else {
       // exclude
@@ -44,6 +43,19 @@ function subsets(array) {
   return result
 }
 
+// Iterative version
+function subsetsIterative(array) {
+  const result = [[]]
+  for (let i = 0; i < array.length; i++) {
+    const len = result.length //will loop infinitely without this
+    for (let x = 0; x < len; x++) {
+      result.push(result[x].concat(array[i]))
+    }
+  }
+  return result
+}
+
 // Tests
 console.log(subsets([1, 2, 3]))
 console.log(subsets(['a', 'b', 'c', 'd']))
+console.log(subsetsIterative(['a', 'b', 'c', 'd']))

@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/permutations
 
 // First attempt
-var permute = function (nums) {
+function permute(nums) {
   const result = []
 
   function pHelper(slate, arr) {
@@ -51,9 +51,31 @@ function permute(nums) {
     }
   }
 
-  pHelper(nums, 0, [])
+  pHelper(0, [])
+  return result
+}
+
+// Optimized backtracking - With mutable params, no separate slate
+function permuteNoSlate(nums) {
+  const result = [],
+    len = nums.length
+  function pHelper(i, arr) {
+    if (len === i) {
+      result.push(arr.slice(0))
+      return
+    }
+
+    for (let pick = i; pick < len; pick++) {
+      swap(arr, pick, i)
+      pHelper(i + 1, arr)
+      swap(nums, pick, i)
+    }
+  }
+
+  pHelper(0, nums)
   return result
 }
 
 // Tests
 console.log(permute([1, 2, 3]))
+console.log(permuteNoSlate([1, 2, 3]))
