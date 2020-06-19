@@ -1,7 +1,7 @@
 // https://leetcode.com/problems/subsets/
 
 /* 
-Recursive BFS
+Recursive DFS
 Time Complexity - O(n * 2^n)
 Space Complexity - O(n * 2^n)
 */

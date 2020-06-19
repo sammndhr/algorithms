@@ -18,7 +18,7 @@ var letterCombinations = function(digits) {
       if (!digits.length) results.push(comb)
       else {
         const digit = digits[0]
-        if (!phone[digit]) return //when digit is 1, 0 & other invalid etries, forEach will never be called which means recurse will never get called again and the combination so far will never reach the end or get pushed to the results array. So the returned results array is empty
+        if (!phone[digit]) return //when digit is 1, 0 & other invalid entries, forEach will never be called which means recurse will never get called again and the combination so far will never reach the end or get pushed to the results array. So the returned results array is empty
         phone[digit].forEach(letter => {
           recurse(digits.slice(1), comb + letter)
         })
