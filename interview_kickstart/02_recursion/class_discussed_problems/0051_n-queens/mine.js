@@ -3,18 +3,18 @@ function solveNQueens(n) {
     board = createBoard(n)
 
   // [0]
-  function placeQueen(r) {
+  function placeQueen(row) {
     //  [1]
-    if (r === n) {
+    if (row === n) {
       result.push(deepCopyBoard(board))
       return
     }
 
-    for (let c = 0; c < n; c++) {
+    for (let col = 0; col < n; col++) {
       // [2]
-      board[r][c] = 'Q'
-      if (isValidCell(board, r, c)) placeQueen(r + 1)
-      board[r][c] = '.'
+      board[row][col] = 'q'
+      if (isValidCell(board, row, col)) placeQueen(row + 1)
+      board[row][col] = '-'
     }
   }
 
@@ -31,21 +31,21 @@ Notes:
 */
 
 // Helper functions
-/* Will check above given row - Diagonal left and right and col. 
+/* Will check above given row - Diagonal left and right and col.
 TODO: Optimize
 */
 function isValidCell(board, row, col) {
   // Vertical column check
   let upCol_row = row - 1
   while (upCol_row > -1) {
-    if (board[upCol_row][col] === 'Q') return false
+    if (board[upCol_row][col] === 'q') return false
     upCol_row--
   }
 
   // Top half Diagonal left check
   let upDiaLeft = { col: col - 1, row: row - 1 }
   while (upDiaLeft['row'] > -1 && upDiaLeft['col'] > -1) {
-    if (board[upDiaLeft['row']][upDiaLeft['col']] === 'Q') return false
+    if (board[upDiaLeft['row']][upDiaLeft['col']] === 'q') return false
     upDiaLeft['row']--
     upDiaLeft['col']--
   }
@@ -53,7 +53,7 @@ function isValidCell(board, row, col) {
   // Top half Diagonal right check
   let upDiaRight = { col: col + 1, row: row - 1 }
   while (upDiaRight['row'] > -1 && upDiaRight['col'] < board.length) {
-    if (board[upDiaRight['row']][upDiaRight['col']] === 'Q') return false
+    if (board[upDiaRight['row']][upDiaRight['col']] === 'q') return false
     upDiaRight['row']--
     upDiaRight['col']++
   }
@@ -64,13 +64,13 @@ function isValidCell(board, row, col) {
 function createBoard(n) {
   const board = []
   for (let i = 0; i < n; i++) {
-    const elem = new Array(n).fill('.')
+    const elem = new Array(n).fill('-')
     board.push(elem)
   }
   return board
 }
 
-/* Copy and format matrix to what leetcode wants. */
+// /* Copy and format matrix to what leetcode wants. */
 function deepCopyBoard(board) {
   const copy = []
   for (const row of board) {
@@ -80,7 +80,7 @@ function deepCopyBoard(board) {
 }
 
 // Tests
-console.log(solveNQueens(4))
+// console.log(solveNQueens(4))
 /* 
 n = 4
 [ 
@@ -95,7 +95,7 @@ n = 4
   ".Q.."]
 ]
 */
-console.log(solveNQueens(5))
+// console.log(solveNQueens(4))
 /* 
 n = 5
 [
@@ -112,4 +112,4 @@ n = 5
 ]
 */
 
-console.log(solveNQueens(0))
+console.log(solveNQueens(4))
