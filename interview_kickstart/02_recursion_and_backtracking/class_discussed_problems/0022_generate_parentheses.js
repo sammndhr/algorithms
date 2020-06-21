@@ -15,7 +15,7 @@ function generateParenthesis(n) {
     }
 
     // Backtracking + base case
-    if (open < 0 || i == total) return
+    if (open < 0 || open > n || i === total) return
 
     // Recursive case
     parenHelper(i + 1, open + 1, slate + '(')
@@ -25,7 +25,7 @@ function generateParenthesis(n) {
   parenHelper(0, 0, '')
   return result
 }
-
+ß
 // Using array for partial
 function generateParenthesis(n) {
   if (n === 0) return []
@@ -39,7 +39,7 @@ function generateParenthesis(n) {
       return
     }
 
-    if (open < 0 || i == total) return
+    if (open < 0 || open > n || i === total) return
 
     slate.push('(')
     parenHelper(i + 1, open + 1, slate)
