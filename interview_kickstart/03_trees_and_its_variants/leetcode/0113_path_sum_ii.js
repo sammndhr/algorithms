@@ -2,9 +2,7 @@
 Dfs recursive with mutable slate
 */
 var pathSum = function (root, sum) {
-  if (!root) return []
-  // recursive dfs
-  const res = []
+  // recursive dfs helper
   function recurse(node, slate, target) {
     target -= node.val
 
@@ -24,6 +22,10 @@ var pathSum = function (root, sum) {
 
     slate.pop()
   }
+
+  // overall
+  if (!root) return []
+  const res = []
 
   recurse(root, [], sum)
   return res

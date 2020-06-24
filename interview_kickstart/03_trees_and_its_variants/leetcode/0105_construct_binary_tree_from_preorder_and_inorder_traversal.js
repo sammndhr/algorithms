@@ -5,6 +5,7 @@ var buildTree = function (preorder, inorder) {
     inOMap[inorder[i]] = i
   }
 
+  // Recursive helper
   function recurse(preO, start1, end1, inO, start2, end2) {
     // return the subtree root of the binary tree constructed from the preorder subarray
     // preorder subarray - preO[start1...end1] and inorder subarray - inO[start2...end2]

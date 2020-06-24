@@ -10,6 +10,30 @@ Time, Space - O(n) with a linked list queue
 - end of first loop, push temp arr to res arr
 */
 
+var levelOrder = function (root) {
+  const res = []
+  if (!root) return res
+  let q = new Queue()
+  q.enqueue(root)
+
+  while (!q.isEmpty()) {
+    const numNodes = q.size,
+      temp = []
+
+    for (let i = 0; i < numNodes; i++) {
+      const node = q.dequeue()
+      temp.push(node.val)
+      if (node.left) q.enqueue(node.left)
+      if (node.right) q.enqueue(node.right)
+    }
+
+    res.push(temp)
+  }
+
+  return res
+}
+
+// Practicing implementing Queue. But can use array too.
 class QueueNode {
   constructor(data, next = null) {
     this.data = data
@@ -49,29 +73,7 @@ class Queue {
   }
 }
 
-var levelOrder = function (root) {
-  const res = []
-  if (!root) return res
-  let q = new Queue()
-  q.enqueue(root)
-
-  while (!q.isEmpty()) {
-    const numNodes = q.size,
-      temp = []
-
-    for (let i = 0; i < numNodes; i++) {
-      const node = q.dequeue()
-      temp.push(node.val)
-      if (node.left) q.enqueue(node.left)
-      if (node.right) q.enqueue(node.right)
-    }
-
-    res.push(temp)
-  }
-
-  return res
-}
-
+// Tests
 const node1 = {
   val: 10,
   right: {
@@ -87,4 +89,3 @@ const node1 = {
 }
 
 console.log(levelOrder(node1))
-// console.log(levelOrder(node2))

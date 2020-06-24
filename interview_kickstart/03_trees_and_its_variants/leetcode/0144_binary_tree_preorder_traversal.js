@@ -1,3 +1,4 @@
+// Easiest dfs traversal to write iteratively
 var preorderTraversal = function (root) {
   if (!root) return []
 

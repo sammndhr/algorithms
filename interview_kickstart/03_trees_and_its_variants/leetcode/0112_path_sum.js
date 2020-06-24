@@ -5,6 +5,7 @@ Time, Space Complexity - O(n)
 var hasPathSum = function (root, sum) {
   if (!root) return false
   let flag = false
+
   // recursive dfs
   function recurse(node, target) {
     target -= node.val
@@ -23,9 +24,12 @@ var hasPathSum = function (root, sum) {
   return flag
 }
 
+// ----------------------------------------------------------------------
+
 // Dfs recursive without global flag
 var hasPathSum = function (root, sum) {
   if (!root) return false
+
   // recursive dfs
   function recurse(node, target) {
     target -= node.val

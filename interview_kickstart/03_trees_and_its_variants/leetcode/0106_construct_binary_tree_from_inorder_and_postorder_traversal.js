@@ -5,6 +5,7 @@ var buildTree = function (inorder, postorder) {
     inOMap[inorder[i]] = i
   }
 
+  // Recursive helper
   function recurse(postO, start1, end1, inO, start2, end2) {
     if (start1 > end1) return null
     if (start1 === end1) return new TreeNode(postO[start1])

@@ -1,4 +1,4 @@
-// Same as level order traversal (Leetcode 102) but reverse the res array at end
+// Same as level order traversal (Leetcode 102) but reverse the temp array alternatively before pushing to res
 
 var zigzagLevelOrder = function (root) {
   const res = []

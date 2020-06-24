@@ -1,8 +1,12 @@
 var countUnivalSubtrees = function (root) {
+  // Overall
   if (!root) return 0
 
   let globalCount = 0
+  dfs(root)
+  return globalCount
 
+  // Recursive helper
   function dfs(node) {
     // Base Case
     if (!node.left && !node.right) {
@@ -24,7 +28,4 @@ var countUnivalSubtrees = function (root) {
     if (amIUnival) globalCount++
     return amIUnival
   }
-
-  dfs(root)
-  return globalCount
 }
