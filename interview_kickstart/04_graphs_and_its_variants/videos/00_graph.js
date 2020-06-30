@@ -6,20 +6,12 @@ class Graph {
   // vertices count
   #vCount
   constructor(size = 0) {
-    this.#adjList = []
+    this.#adjList = new Array(size).fill().map(() => new LinkedList())
     this.#vCount = size
-    this._fillAdjList(size)
   }
 
   get adjList() {
     return this.#adjList
-  }
-
-  // Can't do new Array(size).fill(new LinkedList()) cause fill only works with static values
-  _fillAdjList(size) {
-    for (let i = 0; i < size; i++) {
-      this.#adjList.push(new LinkedList())
-    }
   }
 
   addEdge(start, end, biDir = true) {
