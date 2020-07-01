@@ -1,25 +1,21 @@
-var canFinish = function (numCourses, prerequisites) {
+var findOrder = function (numCourses, prerequisites) {
   const n = numCourses,
     adjList = buildGraph(n, prerequisites),
-    // parent = new Array(n).fill(-1),
     visited = new Array(n).fill(-1),
     arrival = new Array(n).fill(-1),
-    departure = new Array(n).fill(-1)
+    departure = new Array(n).fill(-1),
+    topSort = []
 
   let timestamp = 0
-  // let components = 0 // This makes no sense in a directed graph
 
   for (let v = 0; v < n; v++) {
     if (visited[v] === -1) {
-      // components++
-      // if (components > 1) return false
-
       // if cycle found, you cannot complete the courses
-      if (dfs(v)) return false
+      if (dfs(v)) return []
     }
   }
 
-  return true // no cycle found anywhere
+  return topSort.reverse() // no cycle found anywhere
 
   // -----------------------------------------------
   function dfs(source) {
@@ -29,7 +25,6 @@ var canFinish = function (numCourses, prerequisites) {
 
     for (const neighbor of adjList[source]) {
       if (visited[neighbor] === -1) {
-        // parent[neighbor] = source
         if (dfs(neighbor)) return true
       } else {
         // This is a back edge, hence a cycle
@@ -39,15 +34,16 @@ var canFinish = function (numCourses, prerequisites) {
 
     departure[source] = timestamp
     timestamp++
+    topSort.push(source)
+
     return false
   }
+
   // -----------------------------------------------
   function buildGraph(n, edges) {
     const adjList = new Array(n).fill().map(() => [])
 
     for (const [src, dest] of edges) {
-      // directed graph so push one direction only
-      // adjList[src].push(dest)
       adjList[dest].push(src)
     }
 
@@ -56,9 +52,12 @@ var canFinish = function (numCourses, prerequisites) {
 }
 
 // tests
+
 console.log(
-  canFinish(2, [
+  findOrder(4, [
     [1, 0],
-    [0, 1]
+    [2, 0],
+    [3, 1],
+    [3, 2]
   ])
 )
