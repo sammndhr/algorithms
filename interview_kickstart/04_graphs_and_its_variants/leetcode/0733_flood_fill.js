@@ -28,6 +28,7 @@ var floodFill = function (image, sr, sc, newColor) {
   }
 }
 
+// -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
 // With bfs
 var floodFillBFS = function (image, sr, sc, newColor) {
   const oldColor = image[sr][sc]
