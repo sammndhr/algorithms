@@ -24,10 +24,9 @@ function bfs(source, visited, adjList) {
   queue.push(source)
   visited[source] = 1
 
-  let node
   while (queue.length) {
     // Time complexity of queue.shift() is NOT O(1). Implement queue with linked list for O(1)
-    node = queue.shift()
+    const node = queue.shift()
     for (const neighbor of adjList[node]) {
       if (visited[neighbor] === -1) {
         visited[neighbor] = 1

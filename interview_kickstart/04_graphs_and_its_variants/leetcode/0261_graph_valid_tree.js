@@ -60,6 +60,57 @@ var validTree = function (n, edges) {
   }
 }
 
+// -x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-x-
+/* 
+Advanced Graph Theory + DFS
+  Graph theory - For the graph to be a valid tree, it must have exactly n - 1 edges. Any less, and it can't possibly be fully connected. Any more, and it has to contain cycles. Additionally, if the graph is fully connected and contains exactly n - 1 edges, it can't possibly contain a cycle, and therefore must be a tree!
+
+  So we need to check two things:
+    1. Check whether or not there are n - 1 edges. If there's not, then return false.
+    2. Check whether or not the graph is fully connected. Return true if it is, false if otherwise.
+*/
+var validTree = function (n, edges) {
+  if (edges.length !== n - 1) return false
+
+  const adjList = buildGraph(),
+    visited = new Array(n).fill(-1)
+
+  let components = 0
+
+  for (let v = 0; v < n; v++) {
+    if (visited[v] === -1) {
+      components++
+      if (components > 1) return false //graph isn't connected, not tree
+      dfs(v)
+    }
+  }
+  return true
+
+  // -----------------------------------------------
+  function buildGraph() {
+    let adjList = new Array(n).fill().map(() => [])
+
+    for (const edge of edges) {
+      const src = edge[0],
+        dest = edge[1]
+
+      adjList[src].push(dest)
+      adjList[dest].push(src)
+    }
+
+    return adjList
+  }
+
+  // -----------------------------------------------
+  function dfs(source) {
+    visited[source] = 1
+
+    for (const neighbor of adjList[source]) {
+      if (visited[neighbor] === -1) dfs(neighbor)
+    }
+  }
+}
+
 // Tests
 console.log(
   validTree(5, [

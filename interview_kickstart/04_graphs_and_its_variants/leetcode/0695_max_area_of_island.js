@@ -13,20 +13,18 @@ var maxAreaOfIslandz = function (grid) {
   return maxCount
 
   // -----------------------------------------------
-  function dfs(i, j, count) {
-    if (grid[i][j] !== 0) {
-      grid[i][j] = 0
-      count = count + 1
-    }
+  function dfs(i, j, area) {
+    grid[i][j] = 0
+    area = area + 1
 
     const neighbors = getNeighbors(i, j, grid)
 
     for (const neighbor of neighbors) {
       const [nRow, nCol] = neighbor
 
-      if (grid[nRow][nCol] !== 0) count = dfs(nRow, nCol, count)
+      if (grid[nRow][nCol] !== 0) area = dfs(nRow, nCol, area)
     }
-    return count
+    return area
   }
 }
 
@@ -52,7 +50,7 @@ var maxAreaOfIsland = function (grid) {
     queue.push([i, j])
     grid[i][j] = 0
 
-    let count = 1
+    let area = 1
 
     while (queue.length) {
       const [row, col] = queue.shift(),
@@ -62,13 +60,13 @@ var maxAreaOfIsland = function (grid) {
         const [nRow, nCol] = neighbor
 
         if (grid[nRow][nCol] !== 0) {
-          count++
+          area++
           queue.push([nRow, nCol])
           grid[nRow][nCol] = 0
         }
       }
     }
-    return count
+    return area
   }
 }
 

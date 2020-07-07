@@ -34,6 +34,7 @@ var isBipartite = function (graph) {
           // cycle
           if (parent[node] !== neighbor) {
             // not bipartite (odd length cycle found)
+            // cross edges found in same layer are NOT bipartite
             if (distance[node] == distance[neighbor]) return false
           }
         }

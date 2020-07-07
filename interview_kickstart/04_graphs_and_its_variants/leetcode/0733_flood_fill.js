@@ -2,28 +2,19 @@
 var floodFill = function (image, sr, sc, newColor) {
   const oldColor = image[sr][sc]
 
-  dfs(sr, sc)
+  if (oldColor !== newColor) dfs(sr, sc)
 
   return image
 
   // -----------------------------------------------
   function dfs(i, j) {
-    // All 4-direction connected cells' colors have been changed to new color
-    if (image[i][j] === newColor) return
-    // Edge of same color block
-    if (image[i][j] !== oldColor) return
-    /* 
-    1. if function didn't return, we're still inside the 'same color' block.
-    2. Update old color to new color.
-    3. And call dfs on that cell's valid neighbors.
-    */
     image[i][j] = newColor
+
     const neighbors = getNeighbors(i, j, image)
 
     for (const neighbor of neighbors) {
       const [nRow, nCol] = neighbor
-
-      dfs(nRow, nCol)
+      if (image[nRow][nCol] === oldColor) dfs(nRow, nCol)
     }
   }
 }
@@ -32,15 +23,14 @@ var floodFill = function (image, sr, sc, newColor) {
 // With bfs
 var floodFillBFS = function (image, sr, sc, newColor) {
   const oldColor = image[sr][sc]
+  // Selected color is already new color
+  if (oldColor !== newColor) dfs(sr, sc)
 
   bfs(sr, sc)
 
   return image
 
   function bfs(i, j) {
-    // Selected color is already new color so just return
-    if (image[i][j] === newColor) return
-
     const queue = []
     queue.push([i, j])
     image[i][j] = newColor

@@ -1,3 +1,17 @@
+/*
+This is same as 323. connected components - we're counting number connected of connected components. 
+But instead of an explicit edge list (from which we were able to build an adjacency list),
+we're given a matrix — each cell has four neighbors (4 corner cells have 2 neighbors and edge cells have 3).
+
+Here the things that are different from the connected components problem:
+
+|                              | Count Connected components         | Count no. of islands                   |
+| ---------------------------- | ---------------------------------- | -------------------------------------- |
+| Visited array                | Not given, 1d initialized to -1    | Given grid, 2d filled with 0's and 1's |
+|                              | on visited update to 1             | on visited update to 0                 |
+| Neighbors and adjacency list | Not given, generate from edge list | Not given, implicit                    |
+|                              |                                    | Each cell has 4 neighbors              |
+*/
 // with dfs
 var numIslands = function (grid) {
   let islands = 0
