@@ -1,16 +1,16 @@
 # Algorithms
 
 Everything related to algorithms, toy problems.
-Find Data Structures here--> https://github.com/mrinalini-m/data_structures
+Find Data Structures here--> [github.com/mrinalini-m/data_structures](https://github.com/mrinalini-m/data_structures)
 
-You can can search problems by tags or by name in my blog--> https://blog.mrinalini.dev/
+You can can search problems by tags or by name in my blog--> [blog.mrinalini.dev](https://blog.mrinalini.dev/)
 
 **Usage**
 
 1. Clone repo `git clone https://github.com/mrinalini-m/algorithms.git`
 2. To test individual problems: Eg, run `node leetcode/array_string/0001_two_sum.js`.
 
-> Note: Install [node.js](https://nodejs.org/en/)
+> Note: List of problems in this README is NOT exhaustive.
 
 ## Cracking the Coding Interview
 
