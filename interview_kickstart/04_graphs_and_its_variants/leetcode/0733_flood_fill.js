@@ -24,9 +24,7 @@ var floodFill = function (image, sr, sc, newColor) {
 var floodFillBFS = function (image, sr, sc, newColor) {
   const oldColor = image[sr][sc]
   // Selected color is already new color
-  if (oldColor !== newColor) dfs(sr, sc)
-
-  bfs(sr, sc)
+  if (oldColor !== newColor) bfs(sr, sc)
 
   return image
 

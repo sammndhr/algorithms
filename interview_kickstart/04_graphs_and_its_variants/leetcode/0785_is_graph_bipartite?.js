@@ -78,3 +78,21 @@ var isBipartite = function (graph) {
     return true
   }
 }
+
+// Tests
+console.log(
+  isBipartite([
+    [1, 2, 3],
+    [0, 2],
+    [0, 1, 3],
+    [0, 2]
+  ])
+)
+console.log(
+  isBipartite([
+    [1, 2, 3],
+    [0, 2],
+    [0, 1, 3],
+    [0, 2]
+  ])
+)

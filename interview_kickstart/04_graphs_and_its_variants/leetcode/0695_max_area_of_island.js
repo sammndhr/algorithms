@@ -19,9 +19,7 @@ var maxAreaOfIslandz = function (grid) {
 
     const neighbors = getNeighbors(i, j, grid)
 
-    for (const neighbor of neighbors) {
-      const [nRow, nCol] = neighbor
-
+    for (const [nRow, nCol] of neighbors) {
       if (grid[nRow][nCol] !== 0) area = dfs(nRow, nCol, area)
     }
     return area

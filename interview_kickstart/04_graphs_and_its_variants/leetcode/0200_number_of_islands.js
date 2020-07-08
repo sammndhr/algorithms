@@ -32,9 +32,7 @@ var numIslands = function (grid) {
     grid[i][j] = '0'
     const neighbors = getNeighbors(i, j, grid)
 
-    for (const neighbor of neighbors) {
-      const [nRow, nCol] = neighbor
-
+    for (const [nRow, nCol] of neighbors) {
       if (grid[nRow][nCol] !== '0') dfs(nRow, nCol)
     }
   }
