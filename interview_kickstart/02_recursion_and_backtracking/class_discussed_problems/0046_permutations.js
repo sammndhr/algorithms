@@ -19,7 +19,6 @@ function permute(nums) {
   return result
 }
 
-// Optimized backtracking
 /* 
 Time Complexity - O(n * n!)
 Space Complexity - O(n * n!)
@@ -55,7 +54,7 @@ function permute(nums) {
   return result
 }
 
-// Optimized backtracking - With mutable params, no separate slate
+// With mutable params, no separate slate
 function permuteNoSlate(nums) {
   const result = [],
     len = nums.length

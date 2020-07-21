@@ -113,6 +113,8 @@ function dfsSlateArr(i, slate) {
 
 // Tests
 console.log(generate_all_expressions('123', 6))
+console.log(generate_all_expressions('1245', 14))
+console.log(generate_all_expressions('1285', 20))
 let prev = Date.now()
-console.log(generate_all_expressions('0000000000000', 0))
+// console.log(generate_all_expressions('0000000000000', 0))
 console.log((Date.now() - prev) / 1000)

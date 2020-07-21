@@ -25,7 +25,7 @@ function generateParenthesis(n) {
   parenHelper(0, 0, '')
   return result
 }
-ß
+
 // Using array for partial
 function generateParenthesis(n) {
   if (n === 0) return []
