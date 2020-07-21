@@ -1,3 +1,5 @@
+// REDO: Doesn't work for negative numbers
+
 function countSort(arr, min, max) {
   const len = arr.length,
     count = new Array(max - min + 1).fill(0)
@@ -32,8 +34,7 @@ const testCases = [
 ]
 
 for (const test of testCases) {
-  const arr = JSON.parse(JSON.stringify(test[0])) //copy of array
-  countSort(arr, test[1], test[2])
-  console.log(arr)
-  console.log(JSON.stringify(arr) === JSON.stringify(test[3]))
+  countSort(test[0], test[1], test[2])
+  console.log(test[0])
+  console.log(JSON.stringify(test[0]) === JSON.stringify(test[3]))
 }

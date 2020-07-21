@@ -54,8 +54,7 @@ const testCases = [
 ]
 
 for (const test of testCases) {
-  const arr = JSON.parse(JSON.stringify(test[0])) //copy of array
-  quickSort(arr)
-  console.log(arr)
-  console.log(JSON.stringify(arr) === JSON.stringify(test[1]))
+  quickSort(test[0])
+  console.log(test[0])
+  console.log(JSON.stringify(test[0]) === JSON.stringify(test[1]))
 }

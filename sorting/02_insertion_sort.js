@@ -17,7 +17,7 @@ function insertionSortRecursiveShift(arr) {
       arr[j + 1] = arr[j]
       j--
     }
-    // Place nth in correct positions
+    // Place nth in correct position
     arr[j + 1] = nth
     return
   }
@@ -37,7 +37,6 @@ Space complexity - O(n) (stack size)
 
 function insertionSortIterative(arr) {
   const len = arr.length
-  if (len <= 1) return
 
   for (let i = 1; i < len; i++) {
     const ith = arr[i]
@@ -103,12 +102,16 @@ const testCases = [
 ]
 
 for (const test of testCases) {
-  const arr = JSON.parse(JSON.stringify(test[0])) //copy of array
-  insertionSortIterative(arr)
-  console.log(JSON.stringify(arr) === JSON.stringify(test[1]))
+  insertionSortIterative(test[0])
+  console.log(JSON.stringify(test[0]) === JSON.stringify(test[1]))
 }
+
 for (const test of testCases) {
-  const arr = JSON.parse(JSON.stringify(test[0])) //copy of array
-  insertionSortRecursiveShift(arr)
-  console.log(JSON.stringify(arr) === JSON.stringify(test[1]))
+  insertionSortRecursiveShift(test[0])
+  console.log(JSON.stringify(test[0]) === JSON.stringify(test[1]))
+}
+
+for (const test of testCases) {
+  insertionSortRecursiveBubble(test[0])
+  console.log(JSON.stringify(test[0]) === JSON.stringify(test[1]))
 }

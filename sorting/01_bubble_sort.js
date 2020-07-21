@@ -4,9 +4,9 @@ function bubbleSort(arr) {
   const len = arr.length
 
   for (let i = 0; i < len; i++) {
-    for (let j = 0; j < len - i - 1; j++) {
-      if (arr[j] > arr[j + 1]) {
-        swapArrItemsInPlace(arr, j, j + 1)
+    for (let j = len - 1; j > i; j--) {
+      if (arr[j - 1] > arr[j]) {
+        swapArrItemsInPlace(arr, j, j - 1)
       }
     }
   }

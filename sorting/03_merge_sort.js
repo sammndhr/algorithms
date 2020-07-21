@@ -9,7 +9,9 @@ function mergeSort(arr) {
     // Until we reach either the end of the right array or end of the left array,
     // keep comparing and pushing items into the aux array
     while (i <= mid && j <= end) {
-      if (arr[i] < arr[j]) {
+      // arr[i] < arr[j] will result in an unstable sort.
+      // A stable sort is one which preserves the "order" of repeated values.
+      if (arr[i] <= arr[j]) {
         aux.push(arr[i])
         i++
       } else {
@@ -78,7 +80,6 @@ const testCases = [
 ]
 
 for (const test of testCases) {
-  const arr = JSON.parse(JSON.stringify(test[0])) //copy of array
-  mergeSort(arr)
-  console.log(JSON.stringify(arr) === JSON.stringify(test[1]))
+  mergeSort(test[0])
+  console.log(JSON.stringify(test[0]) === JSON.stringify(test[1]))
 }

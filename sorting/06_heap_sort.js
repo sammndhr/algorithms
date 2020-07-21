@@ -42,8 +42,7 @@ const testCases = [
 ]
 
 for (const test of testCases) {
-  const arr = JSON.parse(JSON.stringify(test[0])) //copy of array
-  const sorted = heapSort(arr)
+  const sorted = heapSort(test[0])
   console.log(sorted)
   console.log(JSON.stringify(sorted) === JSON.stringify(test[1]))
 }
