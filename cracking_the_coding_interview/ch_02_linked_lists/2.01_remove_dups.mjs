@@ -1,8 +1,7 @@
 // linked-list
 // const { LinkedList } = require('../../utils')
-const LinkedList = require('../../../ds/dist/LinkedList').default
-// import { LinkedList } from '../../../data_structures copy'
-// console.log(LinkedList.default)
+
+import LinkedList from '../../../ds/src/LinkedList.mjs'
 
 function removeDups(head) {
   const set = new Set()

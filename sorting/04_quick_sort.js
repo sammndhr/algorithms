@@ -5,27 +5,33 @@ function quickSort(arr) {
   function recurse(start, end) {
     if (start >= end) return
 
-    const randomIndex = getRandomIntInclusive(start, end)
+    const pivot = partition(arr, start, end)
 
-    swapArrItemsInPlace(arr, randomIndex, start)
-
-    const pivot = arr[start]
-    let smaller = start,
-      bigger = start + 1
-
-    for (bigger; bigger <= end; bigger++) {
-      if (arr[bigger] < pivot) {
-        smaller++
-        swapArrItemsInPlace(arr, smaller, bigger)
-      }
-    }
-
-    swapArrItemsInPlace(arr, start, smaller)
-
-    recurse(start, smaller - 1)
-    recurse(smaller + 1, end)
+    recurse(start, pivot - 1)
+    recurse(pivot + 1, end)
   }
   recurse(0, arr.length - 1)
+}
+
+function partition(arr, start, end) {
+  const randomIndex = getRandomIntInclusive(start, end)
+
+  swapArrItemsInPlace(arr, randomIndex, start)
+
+  const pivot = arr[start]
+  let smaller = start,
+    bigger = start + 1
+
+  for (bigger; bigger <= end; bigger++) {
+    if (arr[bigger] < pivot) {
+      smaller++
+      swapArrItemsInPlace(arr, smaller, bigger)
+    }
+  }
+
+  swapArrItemsInPlace(arr, start, smaller)
+
+  return smaller
 }
 
 /*

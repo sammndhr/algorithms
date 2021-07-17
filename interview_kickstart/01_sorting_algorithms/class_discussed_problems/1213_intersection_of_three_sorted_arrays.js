@@ -20,6 +20,7 @@ var twoArraysIntersection = function (arr1, arr2) {
     if (arr1[i] < arr2[j]) i++
     else if (arr2[j] < arr1[i]) j++
     else {
+      // There might be duplicates. So make sure to add number only once.
       const rLen = res.length
       if (rLen === 0 || res[rLen - 1] !== arr1[i]) res.push(arr1[i])
       i++

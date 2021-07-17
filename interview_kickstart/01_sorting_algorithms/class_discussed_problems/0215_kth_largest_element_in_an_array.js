@@ -1,8 +1,9 @@
 // https://leetcode.com/problems/kth-largest-element-in-an-array/
 
-const { getRandomIntInclusive, swapArrItemsInPlace } = require('../../utils')
+const { getRandomIntInclusive, swapArrItemsInPlace } = require('../../../utils')
 
 /* 
+Strategy: Quickselect
 1. If you sort array, then kth largest value will be n-k from beginning.
  eg: [3, 2, 1, 5, 6, 4], k=2 [1,2,3,4,5,6], n-k=4
 2. Use quick sort to partition the array discarding one side of the partition after every partition. If n-k < pivot index, recurse on the left.
@@ -11,44 +12,51 @@ Otherwise recurse on right.
 */
 
 function findKthLargest(arr, k) {
-  const len = arr.length
-  const kthFromlast = len - k
+  const len = arr.length,
+    kthFromlast = len - k
 
   if (len <= 0 || kthFromlast < 0 || kthFromlast > len) return null
 
-  function recurse(start, end) {
-    if (start === end && start === kthFromlast) {
-      return arr[start]
-    }
+  return quickSelect(arr, 0, arr.length - 1, kthFromlast)
+}
 
-    if (start > end) return
+function quickSelect(arr, start, end, kthFromlast) {
+  if (start === end && start === kthFromlast) {
+    return arr[start]
+  }
 
-    const randomIndex = getRandomIntInclusive(start, end)
+  if (start > end) return
 
-    swapArrItemsInPlace(arr, randomIndex, start)
+  const pivot = partition(arr, start, end)
 
-    const pivot = arr[start]
-    let smaller = start,
-      bigger = start + 1
+  if (pivot === kthFromlast) {
+    return arr[pivot]
+  } else if (kthFromlast < pivot) {
+    return quickSelect(arr, start, pivot - 1, kthFromlast)
+  } else {
+    return quickSelect(arr, pivot + 1, end, kthFromlast)
+  }
+}
 
-    for (bigger; bigger <= end; bigger++) {
-      if (arr[bigger] < pivot) {
-        smaller++
-        swapArrItemsInPlace(arr, smaller, bigger)
-      }
-    }
+function partition(arr, start, end) {
+  const randomIndex = getRandomIntInclusive(start, end)
 
-    swapArrItemsInPlace(arr, start, smaller)
+  swapArrItemsInPlace(arr, randomIndex, start)
 
-    if (smaller === kthFromlast) {
-      return arr[smaller]
-    } else if (kthFromlast < smaller) {
-      return recurse(start, smaller - 1)
-    } else {
-      return recurse(smaller + 1, end)
+  const pivot = arr[start]
+  let smaller = start,
+    bigger = start + 1
+
+  for (bigger; bigger <= end; bigger++) {
+    if (arr[bigger] < pivot) {
+      smaller++
+      swapArrItemsInPlace(arr, smaller, bigger)
     }
   }
-  return recurse(0, arr.length - 1)
+
+  swapArrItemsInPlace(arr, start, smaller)
+
+  return smaller
 }
 
 /* 

@@ -43,7 +43,7 @@ Notes:
     - Each heap item will be an instance of HeapNode which will keep track of 
       the arrIndex, elementIndex & value.
 [2] - Keep getting heap top(min) & pushing it into the merged array.
-    - If the min value if Infinity, we've reached the end of all arrays
+    - If the min value is Infinity, we've reached the end of all arrays
 */
 
 /* 

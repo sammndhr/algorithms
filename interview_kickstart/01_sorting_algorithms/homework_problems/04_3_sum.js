@@ -6,7 +6,7 @@ Space Complexity - O(n^2) from possible number of triplets + some space from js 
 
 Overview: 
  - Sort the array
- - Iterate through elements calling threeSum(i) on +ve and unique elements
+ - Iterate through elements calling threeSum(i) on -ve and unique elements
  - threeSum has two pointers low and high with start, direction: i+1 --> <-- end
  - So until low and high don't meet, move pointers & check values at i, low, high adding to result if sum is 0
 */
@@ -21,8 +21,7 @@ function findZeroSum(arr) {
   threeSum(0) // [1]
 
   for (let i = 1; i < len; i++) {
-    const first = arr[i]
-    if (first > 0) break // [2]
+    if (arr[i] > 0) break // [2]
     if (arr[i - 1] !== arr[i]) threeSum(i)
   }
 
@@ -57,7 +56,7 @@ Notes:
 
 /* 
 --------------------------------------------------------------------------------------------
-Slightly optmized version using hashmap (sets). Doesn't check already checked first values.
+Slightly optimized version using hashmap (sets). Doesn't check already checked first values.
 Runs much slower than two pointer solution. Like 3 times as slow. Da fuq. y doe?
 
 Time Complexity - O(n^2)
