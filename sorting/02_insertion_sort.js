@@ -36,9 +36,7 @@ Space complexity - O(n) (stack size)
 /* ---------------------------------------------------------------------------- */
 
 function insertionSortIterative(arr) {
-  const len = arr.length
-
-  for (let i = 1; i < len; i++) {
+  for (let i = 1; i < arr.length; i++) {
     const ith = arr[i]
     let j = i - 1
 
@@ -64,8 +62,6 @@ Space complexity - O(1)
 
 // Recursive insertion sort with repeated swaps to 'bubble up' the nth element
 function insertionSortRecursiveBubble(arr) {
-  const lastIndex = arr.length - 1
-
   function recurse(n) {
     // base case
     if (n <= 0) return
@@ -80,7 +76,7 @@ function insertionSortRecursiveBubble(arr) {
     return
   }
 
-  recurse(lastIndex)
+  recurse(arr.length - 1)
   return
 }
 

@@ -1,17 +1,17 @@
 const { swapArrItemsInPlace } = require('../utils')
 
 function selectionSort(arr) {
-  const len = arr.length
-  let currMinIndex
+  let currMinIndex = 0
 
-  for (let i = 0; i < len; i++) {
+  for (let i = 0; i < arr.length; i++) {
     currMinIndex = i
 
-    for (let j = i + 1; j < len; j++) {
+    for (let j = i + 1; j < arr.length; j++) {
       if (arr[j] < arr[currMinIndex]) {
         currMinIndex = j
       }
     }
+
     if (i !== currMinIndex) swapArrItemsInPlace(arr, i, currMinIndex)
   }
 }

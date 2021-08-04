@@ -25,6 +25,7 @@ function groupTheNumbers(array) {
 
   for (curr; curr < len; curr++) {
     const element = array[curr]
+
     if (isEven(element)) {
       evenPointer++
       swap(array, evenPointer, curr)

@@ -13,15 +13,15 @@ Otherwise recurse on right.
 
 function findKthLargest(arr, k) {
   const len = arr.length,
-    kthFromlast = len - k
+    jthSmallest = len - k
 
-  if (len <= 0 || kthFromlast < 0 || kthFromlast > len) return null
+  if (len <= 0 || jthSmallest < 0 || jthSmallest > len) return null
 
-  return quickSelect(arr, 0, arr.length - 1, kthFromlast)
+  return quickSelect(arr, 0, arr.length - 1, jthSmallest)
 }
 
-function quickSelect(arr, start, end, kthFromlast) {
-  if (start === end && start === kthFromlast) {
+function quickSelect(arr, start, end, jthSmallest) {
+  if (start === end && start === jthSmallest) {
     return arr[start]
   }
 
@@ -29,12 +29,12 @@ function quickSelect(arr, start, end, kthFromlast) {
 
   const pivot = partition(arr, start, end)
 
-  if (pivot === kthFromlast) {
+  if (pivot === jthSmallest) {
     return arr[pivot]
-  } else if (kthFromlast < pivot) {
-    return quickSelect(arr, start, pivot - 1, kthFromlast)
+  } else if (jthSmallest < pivot) {
+    return quickSelect(arr, start, pivot - 1, jthSmallest)
   } else {
-    return quickSelect(arr, pivot + 1, end, kthFromlast)
+    return quickSelect(arr, pivot + 1, end, jthSmallest)
   }
 }
 

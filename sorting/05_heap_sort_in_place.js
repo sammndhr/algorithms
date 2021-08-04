@@ -1,12 +1,12 @@
 const { swapArrItemsInPlace } = require('../utils')
 
-function buildMaxHeap(arr) {
+function heapify(arr) {
   // start at rightmost node which is not a leaf
   let i = Math.floor(arr.length / 2 - 1)
   const lastIndex = arr.length - 1
 
   while (i >= 0) {
-    heapify(arr, i, lastIndex)
+    sinkDown(arr, i, lastIndex)
     i--
   }
 }
@@ -42,8 +42,8 @@ don't need much work and 50% of nodes don't need any work at all to sink down.
 So O(n) isn't really that surprising.
 */
 
-// Time Complexity of heapify - O(log n)
-function heapify(heap, p, lastIndex) {
+// Time Complexity of sinkDown - O(log n)
+function sinkDown(heap, p, lastIndex) {
   while (p < lastIndex) {
     const r = 2 * p + 2,
       l = r - 1,
@@ -70,24 +70,24 @@ function heapify(heap, p, lastIndex) {
 
 function heapSort(arr) {
   // O(n)
-  buildMaxHeap(arr)
+  heapify(arr)
   let lastHeapIndex = arr.length - 1
 
   // n items so T is O(n * logn)
   while (lastHeapIndex > 0) {
     swapArrItemsInPlace(arr, 0, lastHeapIndex)
     lastHeapIndex--
-    heapify(arr, 0, lastHeapIndex) // O(logn)
+    sinkDown(arr, 0, lastHeapIndex) // O(logn)
   }
 }
 
 /*
-Time Complexity = Time to build heap + Time to heapify n items 
+Time Complexity = Time to build heap + Time to sinkDown n items 
 T = O(n) + O(n * logn)
 Since O(nlogn) > O(n), dropping O(n)
 T = O(nlogn)
 
-Space complexity - O(1) (Since heapify isn't recursive)
+Space complexity - O(1) (Since sinkDown isn't recursive)
 */
 
 /* ---------------------------------------------------------------------------- */

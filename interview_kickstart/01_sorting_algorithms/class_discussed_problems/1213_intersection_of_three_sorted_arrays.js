@@ -22,7 +22,7 @@ var twoArraysIntersection = function (arr1, arr2) {
     else {
       // There might be duplicates. So make sure to add number only once.
       const rLen = res.length
-      if (rLen === 0 || res[rLen - 1] !== arr1[i]) res.push(arr1[i])
+      if (res[rLen - 1] !== arr1[i]) res.push(arr1[i])
       i++
       j++
     }
@@ -80,7 +80,7 @@ var threeArraysIntersectionPointers = function (arr1, arr2, arr3) {
 
     if (arr1[i] === arr2[j] && arr2[j] === arr3[k]) {
       const rLen = res.length
-      if (rLen === 0 || res[rLen - 1] !== arr1[i]) res.push(arr1[i])
+      if (res[rLen - 1] !== arr1[i]) res.push(arr1[i])
       i++
       j++
       k++

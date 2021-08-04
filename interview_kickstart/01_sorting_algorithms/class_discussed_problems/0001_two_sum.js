@@ -27,14 +27,18 @@ var twoSumBruteForce = function (nums, target) {
 //Time - O(n), space - O(n)
 var twoSum = (nums, target) => {
   const objMap = {}
+
   for (let i = 0; i < nums.length; i++) {
     const complement = target - nums[i]
+
     if (objMap.hasOwnProperty(complement)) {
       return [objMap[complement], i]
     }
+
     objMap[nums[i]] = i
   }
 }
+
 // Tests
 console.log(twoSumBruteForce([1, 3, 4, 5, 6, 7], 4))
 console.log(twoSum([1, 3, 4, 5, 6, 7], 4))
