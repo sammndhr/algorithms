@@ -21,10 +21,6 @@ function findKthLargest(arr, k) {
 }
 
 function quickSelect(arr, start, end, jthSmallest) {
-  if (start === end && start === jthSmallest) {
-    return arr[start]
-  }
-
   if (start > end) return
 
   const pivot = partition(arr, start, end)
